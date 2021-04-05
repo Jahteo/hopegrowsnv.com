@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import Helmet from 'react-helmet'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
-export default function Layout(props) {
+export default function Layout({ children, landing = false }) {
   const { title } = useSiteMetadata()
+
+  // let isHeaderSticky = true
+  // const observer = new IntersectionObserver(
+  //   (entries, observer) => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         /* Here's where we deal with every intersection */
+  //         isHeaderSticky = false
+  //         observer.unobserve(entry.target)
+  //       }
+  //     })
+  //   },
+  //   { rootMargin: '0px 0px -200px 0px' })
+  // const target = document.querySelector('banner')
+  // console.log(target)
+  // observer.observe(target)
+
   // <Helmet>
   //   <html lang="en" />
   //   <title>{title}</title>
@@ -13,16 +30,17 @@ export default function Layout(props) {
   return (
     <div id="page-wrapper">
       {/* <!-- Header --> */}
-      <header id="header" className="alt">
+      <header id="header" className={landing && 'alt'}>
+        {/* <header id="header"> */}
         <h1 id="logo">
           <a href="index.html">
-            {title} <span>by HTML5 UP</span>
+            <span>logo here</span> {title}
           </a>
         </h1>
         <nav id="nav">
           <ul>
             <li className="current">
-              <a href="index.html">Welcome</a>
+              <a href="/">Welcome</a>
             </li>
             <li className="submenu">
               <a href="/">Layouts</a>
@@ -71,255 +89,41 @@ export default function Layout(props) {
       </header>
 
       {/* <!-- Banner --> */}
-      <section id="banner">
-        {/* <!--
-          ".inner" is set up as an inline-block so it automatically expands
-          in both directions to fit whatever's inside it. This means it won't
-          automatically wrap lines, so be sure to use line breaks where
-          appropriate (<br />).
-        --> */}
-        <div className="inner">
-          <header>
-            <h2>TWENTY</h2>
-          </header>
-          <p>
-            This is <strong>Twenty</strong>, a free
-            <br />
-            responsive template
-            <br />
-            by <a href="http://html5up.net">HTML5 UP</a>.
-          </p>
-          <footer>
-            <ul className="buttons stacked">
-              <li>
-                <a href="#main" className="button fit scrolly">
-                  Tell Me More
-                </a>
-              </li>
-            </ul>
-          </footer>
-        </div>
-      </section>
+      {landing && (
+        <section id="banner">
+          {/* <!--
+            ".inner" is set up as an inline-block so it automatically expands
+            in both directions to fit whatever's inside it. This means it won't
+            automatically wrap lines, so be sure to use line breaks where
+            appropriate (<br />).
+          --> */}
+          <div className="inner">
+            <header>
+              <h2>TWENTY</h2>
+            </header>
+            <p>
+              This is <strong>Twenty</strong>, a free
+              <br />
+              responsive template
+              <br />
+              by <a href="http://html5up.net">HTML5 UP</a>.
+            </p>
+            <footer>
+              <ul className="buttons stacked">
+                <li>
+                  <a href="#main" className="button fit scrolly">
+                    Tell Me More
+                  </a>
+                </li>
+              </ul>
+            </footer>
+          </div>
+        </section>
+      )}
 
       {/* <!-- Main --> */}
       <article id="main">
-        <header className="special container">
-          <span className="icon solid fa-chart-bar" />
-          <h2>
-            As this is my <strong>twentieth</strong> freebie for HTML5 UP
-            <br />I decided to give it a really creative name.
-          </h2>
-          <p>
-            Turns out <strong>Twenty</strong> was the best I could come up with.
-            Anyway, lame name aside,
-            <br />
-            its minimally designed, fully responsive, built on HTML5/CSS3, and,
-            like all my stuff,
-            <br />
-            released for free under the{' '}
-            <a href="http://html5up.net/license">
-              Creative Commons Attribution 3.0
-            </a>{' '}
-            license. Have fun!
-          </p>
-        </header>
-
-        {/* <!-- One --> */}
-        <section className="wrapper style2 container special-alt">
-          <div className="row gtr-50">
-            <div className="col-8 col-12-narrower">
-              <header>
-                <h2>
-                  Behold the <strong>icons</strong> that visualize what you’re
-                  all about. or just take up space. your call bro.
-                </h2>
-              </header>
-              <p>
-                Sed tristique purus vitae volutpat ultrices. Aliquam eu elit
-                eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit
-                amet. Sed tristique purus vitae volutpat ultrices. eu elit eget
-                commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu
-                elit eget arcu commodo.
-              </p>
-              <footer>
-                <ul className="buttons">
-                  <li>
-                    <a href="/" className="button">
-                      Find Out More
-                    </a>
-                  </li>
-                </ul>
-              </footer>
-            </div>
-            <div className="col-4 col-12-narrower imp-narrower">
-              <ul className="featured-icons">
-                <li>
-                  <span className="icon fa-clock">
-                    <span className="label">Feature 1</span>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon solid fa-volume-up">
-                    <span className="label">Feature 2</span>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon solid fa-laptop">
-                    <span className="label">Feature 3</span>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon solid fa-inbox">
-                    <span className="label">Feature 4</span>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon solid fa-lock">
-                    <span className="label">Feature 5</span>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon solid fa-cog">
-                    <span className="label">Feature 6</span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* <!-- Two --> */}
-        <section className="wrapper style1 container special">
-          <div className="row">
-            <div className="col-4 col-12-narrower">
-              <section>
-                <span className="icon solid featured fa-check" />
-                <header>
-                  <h3>This is Something</h3>
-                </header>
-                <p>
-                  Sed tristique purus vitae volutpat ultrices. Aliquam eu elit
-                  eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper
-                  elit, et sagittis turpis. Integer ut fermentum.
-                </p>
-              </section>
-            </div>
-            <div className="col-4 col-12-narrower">
-              <section>
-                <span className="icon solid featured fa-check" />
-                <header>
-                  <h3>Also Something</h3>
-                </header>
-                <p>
-                  Sed tristique purus vitae volutpat ultrices. Aliquam eu elit
-                  eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper
-                  elit, et sagittis turpis. Integer ut fermentum.
-                </p>
-              </section>
-            </div>
-            <div className="col-4 col-12-narrower">
-              <section>
-                <span className="icon solid featured fa-check" />
-                <header>
-                  <h3>Probably Something</h3>
-                </header>
-                <p>
-                  Sed tristique purus vitae volutpat ultrices. Aliquam eu elit
-                  eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper
-                  elit, et sagittis turpis. Integer ut fermentum.
-                </p>
-              </section>
-            </div>
-          </div>
-        </section>
-
-        {/* <!-- Three --> */}
-        <section className="wrapper style3 container special">
-          <header className="major">
-            <h2>
-              Next look at this <strong>cool stuff</strong>
-            </h2>
-          </header>
-
-          <div className="row">
-            <div className="col-6 col-12-narrower">
-              <section>
-                <a href="/" className="image featured">
-                  <img src="images/pic01.jpg" alt="" />
-                </a>
-                <header>
-                  <h3>A Really Fast Train</h3>
-                </header>
-                <p>
-                  Sed tristique purus vitae volutpat commodo suscipit amet sed
-                  nibh. Proin a ullamcorper sed blandit. Sed tristique purus
-                  vitae volutpat commodo suscipit ullamcorper sed blandit lorem
-                  ipsum dolore.
-                </p>
-              </section>
-            </div>
-            <div className="col-6 col-12-narrower">
-              <section>
-                <a href="/" className="image featured">
-                  <img src="images/pic02.jpg" alt="" />
-                </a>
-                <header>
-                  <h3>An Airport Terminal</h3>
-                </header>
-                <p>
-                  Sed tristique purus vitae volutpat commodo suscipit amet sed
-                  nibh. Proin a ullamcorper sed blandit. Sed tristique purus
-                  vitae volutpat commodo suscipit ullamcorper sed blandit lorem
-                  ipsum dolore.
-                </p>
-              </section>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-6 col-12-narrower">
-              <section>
-                <a href="/" className="image featured">
-                  <img src="images/pic03.jpg" alt="" />
-                </a>
-                <header>
-                  <h3>Hyperspace Travel</h3>
-                </header>
-                <p>
-                  Sed tristique purus vitae volutpat commodo suscipit amet sed
-                  nibh. Proin a ullamcorper sed blandit. Sed tristique purus
-                  vitae volutpat commodo suscipit ullamcorper sed blandit lorem
-                  ipsum dolore.
-                </p>
-              </section>
-            </div>
-            <div className="col-6 col-12-narrower">
-              <section>
-                <a href="/" className="image featured">
-                  <img src="images/pic04.jpg" alt="" />
-                </a>
-                <header>
-                  <h3>And Another Train</h3>
-                </header>
-                <p>
-                  Sed tristique purus vitae volutpat commodo suscipit amet sed
-                  nibh. Proin a ullamcorper sed blandit. Sed tristique purus
-                  vitae volutpat commodo suscipit ullamcorper sed blandit lorem
-                  ipsum dolore.
-                </p>
-              </section>
-            </div>
-          </div>
-
-          <footer className="major">
-            <ul className="buttons">
-              <li>
-                <a href="/" className="button">
-                  See More
-                </a>
-              </li>
-            </ul>
-          </footer>
-        </section>
+        {children}
       </article>
 
       {/* <!-- CTA --> */}
