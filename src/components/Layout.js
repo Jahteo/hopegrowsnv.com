@@ -2,7 +2,17 @@ import React, { useEffect } from 'react'
 // import Helmet from 'react-helmet'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
+const test = () => {
+  if (typeof document !== 'undefined') {
+    document.body.classList.remove('is-preload')
+  }
+}
+function useInitialAnimations() {
+  setTimeout(test, 100)
+}
+
 export default function Layout({ children, landing = false }) {
+  useInitialAnimations()
   const { title } = useSiteMetadata()
 
   // let isHeaderSticky = true
@@ -42,8 +52,11 @@ export default function Layout({ children, landing = false }) {
             <li className="current">
               <a href="/">Welcome</a>
             </li>
+            <li>
+              <a href="/aboutUs">Who We Are</a>
+            </li>
             <li className="submenu">
-              <a href="/">Layouts</a>
+              <a href="/">Services</a>
               <ul>
                 <li>
                   <a href="left-sidebar.html">Left Sidebar</a>
@@ -80,8 +93,14 @@ export default function Layout({ children, landing = false }) {
               </ul>
             </li>
             <li>
-              <a href="/" className="button primary">
-                Sign Up
+              <a href="/resources">Resources</a>
+            </li>
+            <li>
+              <a href="/">Log In</a>
+            </li>
+            <li>
+              <a href="/newClient" className="button primary">
+                Create an account
               </a>
             </li>
           </ul>
@@ -99,21 +118,24 @@ export default function Layout({ children, landing = false }) {
           --> */}
           <div className="inner">
             <header>
-              <h2>TWENTY</h2>
+              <h2>Hope Grows Counselling LLC</h2>
             </header>
             <p>
-              This is <strong>Twenty</strong>, a free
+              Providing compassionate and quality care
               <br />
-              responsive template
+              to rural and urban Nevadans alike.
               <br />
-              by <a href="http://html5up.net">HTML5 UP</a>.
+              We're here & ready to help
             </p>
             <footer>
               <ul className="buttons stacked">
                 <li>
                   <a href="#main" className="button fit scrolly">
-                    Tell Me More
+                    Learn How
                   </a>
+                </li>
+                <li>
+                  775-xxx-xxxx
                 </li>
               </ul>
             </footer>
