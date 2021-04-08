@@ -1,90 +1,96 @@
 import React from 'react'
 import Layout from '../components/Layout'
+// import SpecialHeader from '../shared/SpecialHeader'
 
 export default function IndexPage() {
   return (
     <Layout landing>
+      {/* Todo: need to figure out how to properly use this with markdown. Instead of passing the markdown input as props, I'll actually be using the jsx component in the markdown file inside forestry, I think. */}
+      {/* <SpecialHeader
+        icon="fa-chart-bar"
+        header="As this is my **twentieth** freebie for HTML5 UP
+        <br />I decided to give it a really creative name."
+        paragraph="Turns out <strong>Twenty</strong> was the best I could come up with.
+        Anyway, lame name aside,
+        <br />
+        its minimally designed, fully responsive, built on HTML5/CSS3, and,
+        like all my stuff,
+        <br />
+        released for free under the
+        license. Have fun!"
+      /> */}
       <header className="special container">
-        <span className="icon solid fa-chart-bar" />
+        <span className="icon solid fa-door-open" />
         <h2>
-          As this is my <strong>twentieth</strong> freebie for HTML5 UP
-          <br />I decided to give it a really creative name.
+          Opening the door to mental health services
         </h2>
         <p>
-          Turns out <strong>Twenty</strong> was the best I could come up with.
-          Anyway, lame name aside,
-          <br />
-          its minimally designed, fully responsive, built on HTML5/CSS3, and,
-          like all my stuff,
-          <br />
-          released for free under the{' '}
-          <a href="http://html5up.net/license">
-            Creative Commons Attribution 3.0
-          </a>{' '}
-          license. Have fun!
+          HopeGrows is committed to making it easy and safe to see a licensed clinical practitioner. Here is a blurb about how we use telehealth to prevent covid spread, lower costs, and remove the the need to travel for rural nevadans. Talk about how it is all related back to making the best possible experience for a customer. Probably 3-5 sentences total.
         </p>
       </header>
 
-      {/* <!-- One --> */}
+      {/* <!-- Feature w colored background  & left sidebar--> */}
       <section className="wrapper style2 container special-alt">
-        <div className="row gtr-50">
-          <div className="col-8 col-12-narrower">
-            <header>
-              <h2>
-                Behold the <strong>icons</strong> that visualize what you’re
-                all about. or just take up space. your call bro.
-              </h2>
-            </header>
-            <p>
-              Sed tristique purus vitae volutpat ultrices. Aliquam eu elit
-              eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit
-              amet. Sed tristique purus vitae volutpat ultrices. eu elit eget
-              commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu
-              elit eget arcu commodo.
-            </p>
-            <footer>
-              <ul className="buttons">
-                <li>
-                  <a href="/" className="button">
-                    Find Out More
-                  </a>
-                </li>
+        <div className="row gtr-150">
+
+          {/* <!-- Content --> */}
+          <div className="col-8 col-12-narrower imp-narrower">
+            {/* <div className="content"> */}
+            <section>
+              {/* <a href="/" className="image featured"><img src="https://source.unsplash.com/V3dHmb1MOXM" alt="" /></a> */}
+              <header>
+                <h2>Services we offer</h2>
+              </header>
+              <p>We specialize in helping with these areas. This is a tiny overview. Clicking the button will show more details on a different page. Or each service can be be a button instead.</p>
+              <ul>
+                <li>Anger Management</li>
+                <li>Family Counselling</li>
+                <li>Focus Training</li>
+                <li>Depression</li>
+                <li>Anxiety</li>
+                <li>Substance Abuse</li>
               </ul>
-            </footer>
+              <footer>
+                <ul className="buttons">
+                  <li><a href="/" className="button small">Learn More</a></li>
+                </ul>
+              </footer>
+            </section>
+            {/* </div> */}
           </div>
-          <div className="col-4 col-12-narrower imp-narrower">
-            <ul className="featured-icons">
-              <li>
-                <span className="icon fa-clock">
-                  <span className="label">Feature 1</span>
-                </span>
-              </li>
-              <li>
-                <span className="icon solid fa-volume-up">
-                  <span className="label">Feature 2</span>
-                </span>
-              </li>
-              <li>
-                <span className="icon solid fa-laptop">
-                  <span className="label">Feature 3</span>
-                </span>
-              </li>
-              <li>
-                <span className="icon solid fa-inbox">
-                  <span className="label">Feature 4</span>
-                </span>
-              </li>
-              <li>
-                <span className="icon solid fa-lock">
-                  <span className="label">Feature 5</span>
-                </span>
-              </li>
-              <li>
-                <span className="icon solid fa-cog">
-                  <span className="label">Feature 6</span>
-                </span>
-              </li>
-            </ul>
+
+          {/* <!-- Sidebar --> */}
+          <div className="col-4 col-12-narrower">
+            {/* <div className="sidebar"> */}
+
+            <section>
+              <header>
+                <h3>Who We Serve</h3>
+              </header>
+            </section>
+
+            <section>
+              {/* <a href="/" className="image featured">
+                  <img src="https://source.unsplash.com/P47F0-WBmOI/400x400" alt="couple holding hands" />
+                </a> */}
+              <ul className="buttons">
+                <li><a href="/" className="button small">Individuals</a></li>
+              </ul>
+              {/* <a href="/" className="image featured">
+                  <img src="https://source.unsplash.com/oMtXGNw4ZEs/200x200" alt="couple holding hands" />
+                </a> */}
+              <ul className="buttons">
+                <li><a href="/" className="button small">Couples</a></li>
+              </ul>
+              {/* <a href="/" className="image featured">
+                  <img src="https://source.unsplash.com/V3dHmb1MOXM/200x200" alt="couple holding hands" />
+                </a> */}
+              <ul className="buttons">
+                <li><a href="/" className="button small">Families</a></li>
+              </ul>
+            </section>
+
+            {/* </div> */}
           </div>
         </div>
       </section>
