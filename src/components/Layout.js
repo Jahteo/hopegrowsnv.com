@@ -10,6 +10,9 @@ const test = () => {
 function useInitialAnimations() {
   setTimeout(test, 100)
 }
+function newTab(site) {
+  window.open(`'https://www.${site}.com'`, '_blank')
+}
 
 export default function Layout({ children, landing = false }) {
   useInitialAnimations()
@@ -56,7 +59,7 @@ export default function Layout({ children, landing = false }) {
               <a href="/aboutUs">Who We Are</a>
             </li>
             <li className="submenu">
-              <a href="/">Services</a>
+              <a href="/services">Services</a>
               <ul>
                 <li>
                   <a href="left-sidebar.html">Left Sidebar</a>
@@ -126,7 +129,9 @@ export default function Layout({ children, landing = false }) {
               to rural and urban Nevadans alike.
               <br />
               We're here & ready to help
+              <br />
             </p>
+              <i>(also, there will be a local picture behind here, cycling slowly)</i>
             <footer>
               <ul className="buttons stacked">
                 <li>
@@ -152,22 +157,22 @@ export default function Layout({ children, landing = false }) {
       <section id="cta">
         <header>
           <h2>
-            Ready to do <strong>something</strong>?
+            What should be the <strong>calls to action</strong> on this page?
           </h2>
           <p>
-            Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.
+            This is entirely optional, but it's good to think about what we really want a person to do next. It can be the same thing across the entire site or customized on certain pages.
           </p>
         </header>
         <footer>
           <ul className="buttons">
             <li>
               <a href="/" className="button primary">
-                Take My Money
+                Become a new client?
               </a>
             </li>
             <li>
               <a href="/" className="button">
-                LOL Wut
+                Schedule an appt?
               </a>
             </li>
           </ul>
@@ -178,34 +183,28 @@ export default function Layout({ children, landing = false }) {
       <footer id="footer">
         <ul className="icons">
           <li>
-            <a href="/" className="icon brands circle fa-twitter">
-              <span className="label">Twitter</span>
+            {/* TODO: gatsby is **supposed** to respect an anchor tag for external links. But it's not. Figure out why. */}
+            <button
+              type="button"
+              onClick={() => newTab('instagram')}
+              className="icon brands circle fa-instagram"
+            >
+              <span className="label">Instagram</span>
+            </button>
+          </li>
+          <li>
+            <a href="www.instagram.com" className="icon brands circle fa-instagram">
+              <span className="label">Instagram</span>
             </a>
           </li>
           <li>
-            <a href="/" className="icon brands circle fa-facebook-f">
+            <a href="/" className="icon brands circle fa-facebook">
               <span className="label">Facebook</span>
             </a>
           </li>
-          <li>
-            <a href="/" className="icon brands circle fa-google-plus-g">
-              <span className="label">Google+</span>
-            </a>
-          </li>
-          <li>
-            <a href="/" className="icon brands circle fa-github">
-              <span className="label">Github</span>
-            </a>
-          </li>
-          <li>
-            <a href="/" className="icon brands circle fa-dribbble">
-              <span className="label">Dribbble</span>
-            </a>
-          </li>
         </ul>
-
         <ul className="copyright">
-          <li>&copy; Untitled</li>
+          <li>&copy; Josh Glantz</li>
           <li>
             Design: <a href="http://html5up.net">HTML5 UP</a>
           </li>

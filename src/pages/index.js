@@ -41,15 +41,16 @@ export default function IndexPage() {
               <header>
                 <h2>Services we offer</h2>
               </header>
-              <p>We specialize in helping with these areas. This is a tiny overview. Clicking the button will show more details on a different page. Or each service can be be a button instead.</p>
-              <ul>
-                <li>Anger Management</li>
-                <li>Family Counselling</li>
-                <li>Focus Training</li>
-                <li>Depression</li>
-                <li>Anxiety</li>
-                <li>Substance Abuse</li>
-              </ul>
+              <p>This is a tiny overview. Clicking the button will show more details on a different page. Or each service can be be a button instead.</p>
+              <div>
+                <p>Anger Management<br />
+                  Family Counselpng<br />
+                  Focus Training<br />
+                  Depression<br />
+                  Anxiety<br />
+                  Substance Abuse
+                </p>
+              </div>
               <footer>
                 <ul className="buttons">
                   <li><a href="/" className="button small">Learn More</a></li>
