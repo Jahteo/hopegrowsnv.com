@@ -438,6 +438,9 @@ $pattern-background-size: 25em;
 	}
 
 /* Icon */
+	#logoTest {
+		max-height: 1.5em !important;
+	}
 
 	.icon {
 		@include icon;
@@ -988,7 +991,8 @@ $pattern-background-size: 25em;
 		.inner {
 			@include vendor('animation', 'reveal-banner 1s 0.25s ease-in-out');
 			@include vendor('animation-fill-mode', 'forwards');
-			background: transparentize(_palette(banner, inner-bg), 0.5);
+			// background: transparentize(_palette(banner, inner-bg), 0.5);
+			background: rgba(0, 104, 146, 0.5);
 			color: _palette(banner, inner-fg);
 			display: inline-block;
 			opacity: 0;

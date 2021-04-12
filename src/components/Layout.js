@@ -1,5 +1,6 @@
 import React from 'react'
 // import Helmet from 'react-helmet'
+import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
 const test = () => {
@@ -11,7 +12,8 @@ function useInitialAnimations() {
   setTimeout(test, 100)
 }
 function newTab(site) {
-  window.open(`'https://www.${site}.com'`, '_blank')
+  window.open(`'https://www.${site}.com'`, '', '', false)
+  // window.open('https://www.twitter.com')
 }
 
 export default function Layout({ children, landing = false }) {
@@ -45,9 +47,9 @@ export default function Layout({ children, landing = false }) {
       {/* <!-- Header --> */}
       <header id="header" className={landing && 'alt'}>
         {/* <header id="header"> */}
-        <h1 id="logo">
+        <h1>
           <a href="index.html">
-            <span>logo here</span> {title}
+            <img src={logo} alt="Logo" id="logoTest" /> {title}
           </a>
         </h1>
         <nav id="nav">
@@ -131,7 +133,7 @@ export default function Layout({ children, landing = false }) {
               We're here & ready to help
               <br />
             </p>
-              <i>(also, there will be a local picture behind here, cycling slowly)</i>
+            <i>(also, there will be a local picture behind here, cycling slowly)</i>
             <footer>
               <ul className="buttons stacked">
                 <li>
