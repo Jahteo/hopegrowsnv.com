@@ -11,10 +11,6 @@ const test = () => {
 function useInitialAnimations() {
   setTimeout(test, 100)
 }
-function newTab(site) {
-  window.open(`'https://www.${site}.com'`, '', '', false)
-  // window.open('https://www.twitter.com')
-}
 
 export default function Layout({ children, landing = false }) {
   useInitialAnimations()
@@ -125,27 +121,47 @@ export default function Layout({ children, landing = false }) {
             <header>
               <h2>Hope Grows Counselling LLC</h2>
             </header>
-            <p>
-              Providing compassionate and quality care
-              <br />
-              to rural and urban Nevadans alike.
-              <br />
-              We're here & ready to help
-              <br />
-            </p>
-            <i>(also, there will be a local picture behind here, cycling slowly)</i>
-            <footer>
-              <ul className="buttons stacked">
-                <li>
-                  <a href="#main" className="button fit scrolly">
-                    Learn How
-                  </a>
-                </li>
-                <li>
-                  775-xxx-xxxx
-                </li>
-              </ul>
-            </footer>
+
+            {/* <section className="container">
+
+              <div className="row gtr-150">
+                <div className="col-4 col-12-narrower"> */}
+            {/* <!-- Sidebar --> */}
+            {/* <div className="sidebar"> */}
+            <div id="innerHomeBanner">
+              <section>
+                <img src={logo} alt="Logo of hands holding sapling" />
+              </section>
+              {/* </div> */}
+              {/* </div> */}
+              {/* </div> */}
+
+              {/* <div className="col-8 col-12-narrower imp-narrower"> */}
+              {/* <!-- Content --> */}
+              {/* <div className="content" /> */}
+              <section>
+                <p>
+                  Providing compassionate and quality care
+                  <br />
+                  to rural and urban Nevadans alike.
+                  <br />
+                  We're here & ready to help
+                  <br />
+                </p>
+                {/* <i>(also, there will be a local picture behind here, cycling slowly)</i> */}
+                <footer>
+                  <ul className="buttons">
+                    <li>
+                      <a href="mailto:hopehelp@hopegrowsnv.com" className="button fit scrolly"> hopehelp@hopegrowsnv.com </a>
+                    </li>
+                    <li>
+                      <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
+                    </li>
+                  </ul>
+                </footer>
+              </section>
+            </div>
+            {/* </section> */}
           </div>
         </section>
       )}
@@ -185,22 +201,12 @@ export default function Layout({ children, landing = false }) {
       <footer id="footer">
         <ul className="icons">
           <li>
-            {/* TODO: gatsby is **supposed** to respect an anchor tag for external links. But it's not. Figure out why. */}
-            <button
-              type="button"
-              onClick={() => newTab('instagram')}
-              className="icon brands circle fa-instagram"
-            >
-              <span className="label">Instagram</span>
-            </button>
-          </li>
-          <li>
-            <a href="www.instagram.com" className="icon brands circle fa-instagram">
+            <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="icon brands circle fa-instagram">
               <span className="label">Instagram</span>
             </a>
           </li>
           <li>
-            <a href="/" className="icon brands circle fa-facebook">
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="icon brands circle fa-facebook">
               <span className="label">Facebook</span>
             </a>
           </li>
