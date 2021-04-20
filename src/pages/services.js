@@ -4,7 +4,8 @@ import Layout from '../components/Layout'
 export default function services() {
   return (
     <Layout>
-      services
+         <h2>Services</h2>
+      <p>In progress</p>
     </Layout>
   )
 }

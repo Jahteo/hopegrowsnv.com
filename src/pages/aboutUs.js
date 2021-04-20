@@ -4,7 +4,8 @@ import Layout from '../components/Layout'
 export default function aboutUs() {
   return (
     <Layout>
-      aboutUs
+      <h2>About Us</h2>
+      <p>In progress</p>
     </Layout>
   )
 }

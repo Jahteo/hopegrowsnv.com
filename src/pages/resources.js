@@ -4,7 +4,8 @@ import Layout from '../components/Layout'
 export default function resources() {
   return (
     <Layout>
-      resources
+         <h2>Resources</h2>
+      <p>In progress</p>
     </Layout>
   )
 }
