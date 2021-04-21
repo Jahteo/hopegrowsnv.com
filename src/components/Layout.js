@@ -2,6 +2,7 @@ import React from 'react'
 // import Helmet from 'react-helmet'
 import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
+import LoginModal from '../shared/LoginModal'
 
 const test = () => {
   if (typeof document !== 'undefined') {
@@ -97,7 +98,8 @@ export default function Layout({ children, landing = false }) {
               <a href="/resources">Resources</a>
             </li>
             <li>
-              <a href="/">Log In</a>
+              {/* <button type="button">B Log In</button> */}
+              <LoginModal id="login">M Log In </LoginModal>
             </li>
             <li>
               <a href="/newClient" className="button primary">
