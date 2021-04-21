@@ -57,28 +57,34 @@ export default function newClient() {
               <header>
                 <h2>New Client Information</h2>
               </header>
-              <form>
-                <label>
-                  Name:
-                  <input type="text" name="name" />
-                </label>
-                <label>
-                  (Guardian's Name, if client is a minor)
-                  <input type="text" name="guardianName" />
-                </label>
-                <label>
-                  Email:
-                  <input type="text" name="email" />
-                </label>
-                <footer>
-                  <input type="submit" value="Submit" />
-                </footer>
+              <form target="_blank" action="https://formsubmit.co/1a159c46d07bdfc3e20518b5f9b453dc" method="POST">
+                <div className="form-group">
+                  <input type="hidden" name="_template" value="box" />
+                  {/* <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html" /> */}
+                  <input type="hidden" name="_subject" value="New Client Submission from hopegrowsnv.com!" />
+                  {/* <input type="text" name="_honey" style="display:none"> */}
+                  {/* Add this "honeypot" field to avoid spam by fooling scrapers. If a value is provided, the submission will be silently ignored. The input should be hidden with CSS. Use if they want to disable the reCaptcha */}
+                  <label>
+                    Full Name:
+                    <input type="text" name="new_client_name" className="form-control" placeholder="Full Name" required />
+                  </label>
+                  <br />
+                  <label>
+                    (Guardian's Name, if client is a minor)
+                    <input type="text" name="guardians_name" className="form-control" placeholder="Full Name" />
+                  </label>
+                  <br />
+                  <label>
+                    Email Address:
+                    <input type="email" name="email" className="form-control" placeholder="Email Address" required />
+                  </label>
+                  <br />
+                </div>
+                <button type="submit" className="btn btn-lg btn-dark btn-block">Submit Form</button>
               </form>
-              {/* <footer>
-                <ul className="buttons">
-                  <li><a href="/" className="button small">Submit</a></li>
-                </ul>
-              </footer> */}
+              {/* <ul className="buttons">
+                <li><a href="/" className="button small">Submit</a></li>
+              </ul> */}
             </section>
           </div>
 
@@ -90,7 +96,7 @@ export default function newClient() {
               <header>
                 <h3>Optional side bar</h3>
               </header>
-              <p>We can move the instructions down here, or leave this area blank.</p>
+              <p>We can move the instructions (you do, we do, while you wait) down here, or leave this area blank.</p>
             </section>
 
             {/* </div> */}
