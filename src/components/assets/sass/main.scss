@@ -624,11 +624,7 @@ $pattern-background-size: 25em;
 
 		li {
 			display: inline-block;
-			padding: 0 0 0 1.5em;
-
-			&:first-child {
-				padding: 0;
-			}
+			padding: 0.75em;
 		}
 
 		&.stacked {
@@ -699,7 +695,7 @@ $pattern-background-size: 25em;
 		font-weight: 900;
 		letter-spacing: 2px;
 		min-width: 18em;
-		padding: 0 0.75em;
+		padding: 0 1.75em;
 		line-height: 3.75em;
 		text-align: center;
 		text-decoration: none;
@@ -1040,7 +1036,7 @@ $pattern-background-size: 25em;
 /* Main */
 
 	#main {
-		background-image: "./images/dark-tl.svg", "./images/dark-tr.svg", "./images/dark-bl.svg", "./images/dark-br.svg";
+		background-image: url("./images/dark-tl.svg"), url("./images/dark-tr.svg"), url("./images/dark-bl.svg"), url("./images/dark-br.svg");
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: $pattern-background-size;

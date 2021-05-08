@@ -1,16 +1,16 @@
 import React from 'react'
+import { Link } from 'gatsby'
 // import Helmet from 'react-helmet'
 import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 import LoginModal from '../shared/LoginModal'
 
-const test = () => {
-  if (typeof document !== 'undefined') {
-    document.body.classList.remove('is-preload')
-  }
-}
 function useInitialAnimations() {
-  setTimeout(test, 100)
+  setTimeout(() => {
+    if (typeof document !== 'undefined') {
+      document.body.classList.remove('is-preload')
+    }
+  }, 100)
 }
 
 export default function Layout({ children, landing = false }) {
@@ -45,66 +45,32 @@ export default function Layout({ children, landing = false }) {
       <header id="header" className={landing && 'alt'}>
         {/* <header id="header"> */}
         <h1>
-          <a href="index.html">
+          <Link to="/">
             <img src={logo} alt="Logo" id="logoTest" /> {title}
-          </a>
+          </Link>
         </h1>
         <nav id="nav">
           <ul>
             <li className="current">
-              <a href="/">Welcome</a>
+              <Link to="/">Welcome</Link>
             </li>
             <li>
-              <a href="/aboutUs">Who We Are</a>
-            </li>
-            <li className="submenu">
-              <a href="/services">Services</a>
-              <ul>
-                <li>
-                  <a href="left-sidebar.html">Left Sidebar</a>
-                </li>
-                <li>
-                  <a href="right-sidebar.html">Right Sidebar</a>
-                </li>
-                <li>
-                  <a href="no-sidebar.html">No Sidebar</a>
-                </li>
-                <li>
-                  <a href="contact.html">Contact</a>
-                </li>
-                <li className="submenu">
-                  <a href="/">Submenu</a>
-                  <ul>
-                    <li>
-                      <a href="/">Dolore Sed</a>
-                    </li>
-                    <li>
-                      <a href="/">Consequat</a>
-                    </li>
-                    <li>
-                      <a href="/">Lorem Magna</a>
-                    </li>
-                    <li>
-                      <a href="/">Sed Magna</a>
-                    </li>
-                    <li>
-                      <a href="/">Ipsum Nisl</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <Link to="/aboutUs">Who We Are</Link>
             </li>
             <li>
-              <a href="/resources">Resources</a>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/resources">Resources</Link>
             </li>
             <li>
               {/* <button type="button">B Log In</button> */}
               <LoginModal id="login">M Log In </LoginModal>
             </li>
             <li>
-              <a href="/newClient" className="button primary">
+              <Link to="/newClient" className="button primary">
                 Create an account
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -145,7 +111,7 @@ export default function Layout({ children, landing = false }) {
                 <p>
                   Providing compassionate and quality care
                   <br />
-                  to rural and urban Nevadans alike.
+                  for rural and urban Nevadans alike.
                   <br />
                   We're here & ready to help
                   <br />
@@ -154,7 +120,7 @@ export default function Layout({ children, landing = false }) {
                 <footer>
                   <ul className="buttons">
                     <li>
-                      <a href="mailto:hopehelp@hopegrowsnv.com" className="button fit scrolly"> hopehelp@hopegrowsnv.com </a>
+                      <a href="mailto:hopehelp@hopegrowsnv.com" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
                     </li>
                     <li>
                       <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
@@ -169,30 +135,30 @@ export default function Layout({ children, landing = false }) {
       )}
 
       {/* <!-- Main --> */}
-      <article id="main">
-        {children}
-      </article>
+      {children}
 
       {/* <!-- CTA --> */}
       <section id="cta">
         <header>
           <h2>
-            What should be the <strong>calls to action</strong> on this page?
+            First Steps
           </h2>
-          <p>
-            This is entirely optional, but it's good to think about what we really want a person to do next. It can be the same thing across the entire site or customized on certain pages.
-          </p>
         </header>
         <footer>
           <ul className="buttons">
             <li>
-              <a href="/" className="button primary">
-                Become a new client?
+              <Link to="/newClient" className="button primary">
+                Become a New Client
+              </Link>
+            </li>
+            <li>
+              <a href="tel:+17755614328" className="button">
+                Call us: (775) 561-4328
               </a>
             </li>
             <li>
-              <a href="/" className="button">
-                Schedule an appt?
+              <a href="mailto:hopehelp@hopegrowsnv.com" className="button">
+                Email us: hopehelp@hopegrowsnv.com
               </a>
             </li>
           </ul>
