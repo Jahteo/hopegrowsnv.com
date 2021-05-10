@@ -70,7 +70,8 @@ export default function Layout({ children, landing = false }) {
             </li>
             <li>
               {/* <button type="button">B Log In</button> */}
-              <LoginModal id="login" />
+              {/* <LoginModal id="login" /> */}
+              <a href="https://hopegrowsnv.clientsecure.me/sign-in">Log In</a>
             </li>
             <li>
               <Link to="/newClient" className="button primary">
