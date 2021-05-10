@@ -17,6 +17,11 @@ export default function Layout({ children, landing = false }) {
   useInitialAnimations()
   const { title } = useSiteMetadata()
 
+  if (typeof window !== 'undefined') {
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('a[href*="#"]')
+  }
+
   // let isHeaderSticky = true
   // const observer = new IntersectionObserver(
   //   (entries, observer) => {
