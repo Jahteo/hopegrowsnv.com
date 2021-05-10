@@ -1,6 +1,9 @@
 import React from 'react'
 import './LoginModal.css'
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== 'undefined'
+
 // this is just pulled from w3schools for the moment, should be cleaned and possibly use state later. It's currenlty set just for the loginModal, but would be a great reusable component
 
 export default function Modal(header, body, footer, id) {
@@ -14,11 +17,14 @@ export default function Modal(header, body, footer, id) {
     modal.style.display = 'none'
   }
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function closeModalOther(event) {
-    const modal = document.getElementById('myModal')
-    if (event.target === modal) {
-      modal.style.display = 'none'
+  if (isBrowser) {
+    // Everything using window.onclick
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function closeModalOther(event) {
+      const modal = document.getElementById('myModal')
+      if (event.target === modal) {
+        modal.style.display = 'none'
+      }
     }
   }
   return (
