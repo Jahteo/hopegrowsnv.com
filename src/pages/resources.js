@@ -237,14 +237,14 @@ export default function resources() {
 
   const resourceSections = [
     { name: 'Food Banks', toID: '#foodBanks' },
-    { name: 'Medical', id: '#medicals' },
-    { name: 'Medicaid & Welfare', id: '#medicaidWelfares' },
-    { name: 'Crisis Lines', id: '#crisis' },
-    { name: 'Legal Aides', id: '#legal' },
-    { name: 'DCSF Offices', id: '#dcfso' },
-    { name: 'School Resources', id: '#school' },
-    { name: 'Housing', id: '#housing' },
-    { name: 'Utilities', id: '#utilities' },
+    { name: 'Medical', toID: '#medicals' },
+    { name: 'Medicaid & Welfare', toID: '#medicaidWelfares' },
+    { name: 'Crisis Lines', toID: '#crisis' },
+    { name: 'Legal Aides', toID: '#legal' },
+    { name: 'DCSF Offices', toID: '#dcfso' },
+    { name: 'School Resources', toID: '#school' },
+    { name: 'Housing', toID: '#housing' },
+    { name: 'Utilities', toID: '#utilities' },
   ]
   return (
     <Layout>

@@ -77,7 +77,8 @@ export default function newClient() {
                   <input type="email" name="email" placeholder="Email" required />
                 </label>
                 <label className="col-12">
-                  If you have insurance, please let us know who your provider is, otherwise please type "No insurance". (Do not include your plan number here):
+                  We work with folks that are self-pay and those with health insurance. <br />
+                  If you have insurance, please let us know who your provider is, otherwise please type "self pay" (Do not include your plan number here):
                   <input type="text" name="insurance" placeholder="example: BlueCross Blue Sheild'" required />
                 </label>
                 <label className="col-12">

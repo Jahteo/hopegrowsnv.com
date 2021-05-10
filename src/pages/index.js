@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
 // import SpecialHeader from '../shared/SpecialHeader'
@@ -44,20 +45,21 @@ export default function IndexPage() {
                 </header>
                 <p>Hope Grows works to provide evidence based treatments to help our clients manage the mental health challenges. Below are some of the challenges we help treat:</p>
                 <div>
+
                   <p>Depression<br />
                     Anxiety<br />
                     PTSD<br />
                     Trauma<br />
+                    Phobias<br />
+                    Interpersonal Conflict<br />
+                    Stress Management<br />
+                    Struggles with Grief and Loss<br />
+                    Panic Attacks<br />
                     Anger Management<br />
                     Bipolar Disorder<br />
                     Substance Abuse<br />
                   </p>
                 </div>
-                <footer>
-                  <ul className="buttons">
-                    <li><a href="/services" className="button small">Learn More</a></li>
-                  </ul>
-                </footer>
               </section>
               {/* </div> */}
             </div>
@@ -68,23 +70,20 @@ export default function IndexPage() {
 
               <section>
                 <header>
-                  <h3>Who We Serve</h3>
+                  <h2>Who We Serve</h2>
                 </header>
               </section>
 
               <section>
-                <ul className="buttons">
-                  <li>Individuals</li>
-                </ul>
-                <ul className="buttons">
-                  <li>Families</li>
-                </ul>
-                <ul className="buttons">
-                  <li>Couples</li>
-                </ul>
-                <ul className="buttons">
-                  <li>Groups</li>
-                </ul>
+                  <h3>Individuals</h3>
+                  <h3>Families</h3>
+                  <h3>Couples</h3>
+                  <h3>Groups</h3>
+                <footer>
+                  <ul className="buttons">
+                    <li><Link href="/services" className="button small">Learn More</Link></li>
+                  </ul>
+                </footer>
               </section>
 
               {/* </div> */}

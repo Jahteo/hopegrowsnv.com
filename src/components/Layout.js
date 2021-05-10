@@ -168,6 +168,9 @@ export default function Layout({ children, landing = false }) {
             </li>
           </ul>
         </footer>
+        <blockquote>
+          “The saddest day hath gleams of light, the darkest wave hath bright foam beneath it, the twinkles o'er the cloudiest night, some solitary star to cheer it.” —Sarah Winnemucca
+        </blockquote>
       </section>
 
       {/* <!-- Footer --> */}
