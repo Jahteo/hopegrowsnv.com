@@ -8,49 +8,49 @@ export default function resources() {
       name: 'Yerington Food Pantry',
       tel: '775-350-4597',
       address: '124 W Bridge ST, Yerington NV 89447',
-      url: 'Yerington Food Pantry | Facebook',
+      url: 'facebook.com/Yerington-Food-Pantry-1487199518021847',
     },
 
     {
       name: 'Silver Stage Food Pantry',
       tel: '775-577-9161',
       address: '1775 E HWY 50, Silver Springs NV 89429',
-      url: 'Silver Stage Food Pantry | Facebook',
+      url: 'facebook.com/silverstagefoodpantry',
     },
 
     {
       name: 'Dayton Food Bank',
       tel: '775-246-7834',
       address: '5 Enterprise Way, Dayton NV 8903',
-      url: 'Dayton Food Pantry, Dayton NV (food-banks.org)',
+      url: 'food-banks.org',
     },
 
     {
       name: 'Living Faith Christian Fellowship',
       tel: '775-575-5037',
       address: '115 West Main St, Fernley NV 89408',
-      url: 'http://www.livingfaithchristianfellowshipchurch.org/',
+      url: 'livingfaithchristianfellowshipchurch.org',
     },
 
     {
       name: 'Hawthorne Food Pantry',
       tel: '775-945-2471',
       address: '924 5th St, Hawthorne NV 89415',
-      url: 'www.cahsnv.org',
+      url: 'cahsnv.org',
     },
   ]
   const medicals = [
     {
-      name: 'Yerington/ South Lyon Medical Center ',
+      name: 'Yerington/ South Lyon Medical Center – Heart of a Healthy Community',
       tel: '775-463-2301',
       address: '213 South Whitacre St, Yerington NV 89447',
-      url: 'South Lyon Medical Center – Heart of a Healthy Community (slmcnv.org)',
+      url: 'slmcnv.org',
     },
     {
       name: 'Silver Springs Rural Health Center',
       tel: '775-577-2117',
       address: '3595 US-50 Silver Springs, NV 89429',
-      url: 'Silver Springs Rural Health Centers Renown Health',
+      url: 'renown.org/locations/primary-care/silver-springs',
     },
     {
       name: 'Topaz Ranch Medical Clinic',
@@ -62,13 +62,13 @@ export default function resources() {
       name: 'Banner Health Clinic',
       tel: '775-575-7171',
       address: '805 E Main ST, Fernley NV 89408',
-      url: 'Banner Health Center in Fernley | Nevada Pacific Pkwy & US-50',
+      url: 'bannerhealth.com/locations/fernley/banner-health-center-fernley',
     },
     {
       name: 'Carson Tahoe Physicians Clinics',
       tel: '775-445-7630',
       address: '901 Medical Center, Dayton NV 89403',
-      url: 'Carson Tahoe Health | Healthcare Network',
+      url: 'carsontahoe.com',
     },
     {
       name: 'Mt Grant General Hospital',
@@ -88,7 +88,7 @@ export default function resources() {
       name: 'Lyon County Human Services',
       tel: '775-577-5009',
       address: '620 Lake Avenue, Silver Springs NV 89429',
-      url: 'https://www.lyon-county.org/175/Human-Services',
+      url: 'lyon-county.org/175/Human-Services',
     },
     {
       name: 'State of Nevada Health & Human Services',
@@ -100,16 +100,16 @@ export default function resources() {
       name: 'Nevada State Welfare & Supportive Services',
       tel: '775-945-3602',
       address: '100 C Street, Hawthorne NV 89415',
-      url: ' https://dwss.nv.gov/',
+      url: ' dwss.nv.gov',
     },
     {
       name: 'Dayton Human Services',
       tel: '775-246-6326',
       address: '5 Pine Cone Road, Dayton NV 89403',
-      url: 'Lyon County, NV - Official Website | Official Website (lyon-county.org)',
+      url: 'lyon-county.org',
     },
   ]
-  const crisiLines = [
+  const crisisLines = [
     {
       name: 'Mobile Outreach',
       tel: '775-334-2677',
@@ -144,21 +144,21 @@ export default function resources() {
       name: 'Sexual Assault Hotline',
       tel: '1-775-221-7600',
       address: 'Text Sass to 839863',
-      url: 'Sexual Assault Hotline and Support Services | CSSNV',
+      url: 'cssnv.org/sexual-assault/',
     },
   ]
   const legalAides = [
     {
-      name: 'Nevada Legal Services',
+      name: 'Nevada Legal Services - Free Legal Services for Low-Income Nevadans',
       tel: '775-463-1222',
       address: '720 S Main St Unit A, Yerington NV 89447',
-      url: 'Nevada Legal Services - Free Legal Services for Low-Income Nevadans (nlslaw.net)',
+      url: 'nlslaw.net',
     },
     {
       name: 'A Nevada’s Best',
       tel: '775-575-5556',
       address: '564 Wedge Lane, Fernley NV 89408',
-      url: 'NEVADA INCORPORATE #1 $29.00 | Incorporate Online',
+      url: 'nevadaincorporate.com/',
     },
     {
       name: 'Affordable Legal Services',
@@ -186,19 +186,19 @@ export default function resources() {
       name: 'Safe Voice Nevada ',
       tel: '1-833-216-7233',
       address: '',
-      url: 'Safe Voice Nevada (safevoicenv.org)',
+      url: 'safevoicenv.org',
     },
     {
       name: 'Lyon County School District ',
       tel: '775-575-1575',
       address: '1100 Jasmine Ln, Fernley NV 89408',
-      url: 'www.sms.lyoncsd.org',
+      url: 'sms.lyoncsd.org',
     },
     {
       name: 'Lyon County School District ',
       tel: '775-463-6800',
       address: '25 East Goldfield Ave, Yerington NV 89447',
-      url: 'Home - Lyon County School District (lyoncsd.org)',
+      url: 'lyoncsd.org',
     },
   ]
   const housings = [
@@ -206,18 +206,18 @@ export default function resources() {
       name: 'Nevada Rural Housing Authority',
       tel: '775-887-1795',
       address: 'Main Office: 3695 Desatoya Drive, Carson City NV 89701',
-      url: 'info@nvrural.org',
+      url: 'nvrural.org',
     },
     {
       name: 'Rental Assistance',
       tel: '775-887-1795',
       address: 'Email: renthelp@nvrural.org ',
-      url: '',
+      url: 'nvrural.org/renter-services',
     },
     {
       name: 'Cares Housing Assistance Program (CHAP)',
       tel: '775-887-1795',
-      address: 'Login to Nevada Rural Housing Authority to track your url: account | Nevada Rural Housing Authority (securecafe.com)',
+      address: 'housing.nv.gov',
     },
   ]
   const utilities = [
@@ -225,13 +225,13 @@ export default function resources() {
       name: 'NV Energy',
       tel: 'Special Assistance Fund for Energy (SAFE)',
       address: '775-577-5009',
-      url: 'Assistance Programs | NV Energy',
+      url: 'nvenergy.com/account-services/assistance-programs',
     },
     {
       name: 'Utility Bill Assistance ',
       tel: '211 Nevada ',
       address: '1-866-535-5654',
-      url: 'Utility Bill Assistance - Nevada 211',
+      url: 'nevada211.org/utility-services/',
     },
   ]
 
@@ -274,7 +274,7 @@ export default function resources() {
                     <h3>{foodBank.name}</h3>
                     <p>{foodBank.tel}</p>
                     <p>{foodBank.address}</p>
-                    <p>{foodBank.url}</p>
+                    <a href={`http://${foodBank.url}`}>{foodBank.url}</a>
                     {(foodBank.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
@@ -291,7 +291,7 @@ export default function resources() {
                     <h3>{medical.name}</h3>
                     <p>{medical.tel}</p>
                     <p>{medical.address}</p>
-                    <p>{medical.url}</p>
+                    <a href={`http://${medical.url}`}>{medical.url}</a>
                     {(medical.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
@@ -308,7 +308,7 @@ export default function resources() {
                     <h3>{medWelf.name}</h3>
                     <p>{medWelf.tel}</p>
                     <p>{medWelf.address}</p>
-                    <p>{medWelf.url}</p>
+                    <a href={`http://${medWelf.url}`}>{medWelf.url}</a>
                     {(medWelf.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
@@ -318,15 +318,15 @@ export default function resources() {
               <section id="crisis" className="wrapper style2 container special">
                 <header><h2>Crisis Lines</h2></header>
               </section>
-              {crisiLines.map((crisiLine) => {
-                const last = crisiLines[crisiLines.length - 1].name
+              {crisisLines.map((crisisLine) => {
+                const last = crisisLines[crisisLines.length - 1].name
                 return (
                   <>
-                    <h3>{crisiLine.name}</h3>
-                    <p>{crisiLine.tel}</p>
-                    <p>{crisiLine.address}</p>
-                    <p>{crisiLine.url}</p>
-                    {(crisiLine.name === last) ? <hr />
+                    <h3>{crisisLine.name}</h3>
+                    <p>{crisisLine.tel}</p>
+                    <p>{crisisLine.address}</p>
+                    <a href={`http://${crisisLine.url}`}>{crisisLine.url}</a>
+                    {(crisisLine.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
                 )
@@ -342,7 +342,7 @@ export default function resources() {
                     <h3>{legalAide.name}</h3>
                     <p>{legalAide.tel}</p>
                     <p>{legalAide.address}</p>
-                    <p>{legalAide.url}</p>
+                    <a href={`http://${legalAide.url}`}>{legalAide.url}</a>
                     {(legalAide.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
@@ -359,7 +359,7 @@ export default function resources() {
                     <h3>{DCFSOffice.name}</h3>
                     <p>{DCFSOffice.tel}</p>
                     <p>{DCFSOffice.address}</p>
-                    <p>{DCFSOffice.url}</p>
+                    <a href={`http://${DCFSOffice.url}`}>{DCFSOffice.url}</a>
                     {(DCFSOffice.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
@@ -376,7 +376,7 @@ export default function resources() {
                     <h3>{schoolResource.name}</h3>
                     <p>{schoolResource.tel}</p>
                     <p>{schoolResource.address}</p>
-                    <p>{schoolResource.url}</p>
+                    <a href={`http://${schoolResource.url}`}>{schoolResource.url}</a>
                     {(schoolResource.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
@@ -393,7 +393,7 @@ export default function resources() {
                     <h3>{housing.name}</h3>
                     <p>{housing.tel}</p>
                     <p>{housing.address}</p>
-                    <p>{housing.url}</p>
+                    <a href={`http://${housing.url}`}>{housing.url}</a>
                     {(housing.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
@@ -403,15 +403,15 @@ export default function resources() {
               <section id="utilities" className="wrapper style2 container special">
                 <header><h2>Utilities</h2></header>
               </section>
-              {utilities.map((utilitie) => {
+              {utilities.map((utility) => {
                 const last = utilities[utilities.length - 1].name
                 return (
                   <>
-                    <h3>{utilitie.name}</h3>
-                    <p>{utilitie.tel}</p>
-                    <p>{utilitie.address}</p>
-                    <p>{utilitie.url}</p>
-                    {(utilitie.name === last) ? <hr />
+                    <h3>{utility.name}</h3>
+                    <p>{utility.tel}</p>
+                    <p>{utility.address}</p>
+                    <a href={`http://${utility.url}`}>{utility.url}</a>
+                    {(utility.name === last) ? <hr />
                       : <hr style={{ borderTop: '3px solid #bbb' }} />}
                   </>
                 )
@@ -457,14 +457,14 @@ const resourceList = [
         name: 'Living Faith Christian Fellowship',
         tel: '775-575-5037',
         address: '115 West Main St, Fernley NV 89408',
-        url: 'http://www.livingfaithchristianfellowshipchurch.org/',
+        url: 'http://livingfaithchristianfellowshipchurch.org/',
       },
 
       {
         name: 'Hawthorne Food Pantry',
         tel: '775-945-2471',
         address: '924 5th St, Hawthorne NV 89415',
-        url: 'www.cahsnv.org',
+        url: 'cahsnv.org',
       },
     ],
   },
@@ -529,7 +529,7 @@ const resourceList = [
         name: 'Lyon County Human Services',
         tel: '775-577-5009',
         address: '620 Lake Avenue, Silver Springs NV 89429',
-        url: 'https://www.lyon-county.org/175/Human-Services',
+        url: 'https://lyon-county.org/175/Human-Services',
       },
 
       {
@@ -659,7 +659,7 @@ const resourceList = [
         name: 'Lyon County School District ',
         tel: '775-575-1575',
         address: '1100 Jasmine Ln, Fernley NV 89408',
-        url: 'www.sms.lyoncsd.org',
+        url: 'sms.lyoncsd.org',
       },
 
       {
