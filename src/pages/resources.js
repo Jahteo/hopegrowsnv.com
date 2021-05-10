@@ -235,6 +235,17 @@ export default function resources() {
     },
   ]
 
+  const resourceSections = [
+    { name: 'Food Banks', toID: '#foodBanks' },
+    { name: 'Medical', id: '#medicals' },
+    { name: 'Medicaid & Welfare', id: '#medicaidWelfares' },
+    { name: 'Crisis Lines', id: '#crisis' },
+    { name: 'Legal Aides', id: '#legal' },
+    { name: 'DCSF Offices', id: '#dcfso' },
+    { name: 'School Resources', id: '#school' },
+    { name: 'Housing', id: '#housing' },
+    { name: 'Utilities', id: '#utilities' },
+  ]
   return (
     <Layout>
 
@@ -243,18 +254,21 @@ export default function resources() {
         <header className="special container">
           <span className="icon solid fa-tasks" />
           <h2>Resources</h2>
-          <p>We at Hope Grows believe that mental health is only one piece of the puzzle when it comes to a person’s wellness and ability to manage both their responsibilities and achieve their goals. Below you will find a list of community resources that can aid in different facets of one’s life.</p>
-          <ul>
-            <li><Link to="#foodBanks">Food Banks</Link></li>
-            <li><Link to="#medicals">Medical</Link></li>
-            <li><Link to="#medicaidWelfares">Medicaid & Welfare</Link></li>
-            <li><Link to="#crisis">Crisis Lines</Link></li>
-            <li><Link to="#legal">Legal Aides</Link></li>
-            <li><Link to="#dcfso">DCSF Offices</Link></li>
-            <li><Link to="#school">School Resources</Link></li>
-            <li><Link to="#housing">Housing</Link></li>
-            <li><Link to="#utilities">Utilities</Link></li>
-          </ul>
+          <p>We at Hope Grows believe that mental health is only one piece of the puzzle when it comes to a person’s wellness and ability to manage both their responsibilities and achieve their goals. Below you will find a list of community resources that can aid in different facets of one’s life.</p> <br />
+          {/* Scrolling buttons */}
+          <section className="wrapper style1 container special">
+            <div className="row">
+
+              {resourceSections.map((section) => {
+                return (
+                  <div className="col-4 col-12-narrower buttons">
+                    <Link to={section.toID} className="button small">{section.name}</Link>
+                  </div>
+                )
+              })}
+
+            </div>
+          </section>
         </header>
 
         {/* <!-- Section One, NoSidebar --> */}
