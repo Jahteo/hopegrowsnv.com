@@ -49,7 +49,7 @@ export default function Layout({ children, landing = false }) {
       {/* <!-- Header --> */}
       <header id="header" className={landing && 'alt'}>
         {/* <header id="header"> */}
-        <h1>
+        <h1 id="logo">
           <Link to="/">
             <img src={logo} alt="Logo" id="logoTest" /> {title}
           </Link>
@@ -70,7 +70,7 @@ export default function Layout({ children, landing = false }) {
             </li>
             <li>
               {/* <button type="button">B Log In</button> */}
-              <LoginModal id="login">M Log In </LoginModal>
+              <LoginModal id="login" />
             </li>
             <li>
               <Link to="/newClient" className="button primary">

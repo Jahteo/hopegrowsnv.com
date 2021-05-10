@@ -30,7 +30,15 @@ export default function Modal(header, body, footer, id) {
   return (
     <>
       {/* <!-- Trigger/Open The Modal --> */}
-      <button id="myBtn" type="button" onClick={() => openmyBtn()}>Log In</button>
+      <button
+        id="myBtn"
+        type="button"
+        className="button"
+        onClick={() => openmyBtn()}
+        style={{ lineHeight: '2em' }}
+      >
+        Log In
+      </button>
 
       {/* // <!-- The Modal --> */}
       <div id="myModal" className="modal">
