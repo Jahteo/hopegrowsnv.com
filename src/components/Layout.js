@@ -13,6 +13,15 @@ function useInitialAnimations() {
   }, 100)
 }
 
+const navList = [
+  <Link to="/">Welcome</Link>,
+  <Link to="/aboutUs">Who We Are</Link>,
+  <Link to="/services">Services</Link>,
+  <Link to="/resources">Resources</Link>,
+  <a href="https://hopegrowsnv.clientsecure.me/sign-in">Log In</a>,
+  <Link to="/newClient" className="button primary">Become a Client</Link>,
+]
+
 export default function Layout({ children, landing = false }) {
   useInitialAnimations()
   const { title } = useSiteMetadata()
@@ -20,6 +29,9 @@ export default function Layout({ children, landing = false }) {
   if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
     require('smooth-scroll')('a[href*="#"]')
+  }
+  function openSidebar() {
+    // const body =
   }
 
   // let isHeaderSticky = true
@@ -56,6 +68,13 @@ export default function Layout({ children, landing = false }) {
         </h1>
         <nav id="nav">
           <ul>
+            {navList.map((link) => {
+              return (
+                <li>{link}</li>
+              )
+            })}
+          </ul>
+          {/* <ul>
             <li className="current">
               <Link to="/">Welcome</Link>
             </li>
@@ -70,15 +89,15 @@ export default function Layout({ children, landing = false }) {
             </li>
             <li>
               {/* <button type="button">B Log In</button> */}
-              {/* <LoginModal id="login" /> */}
-              <a href="https://hopegrowsnv.clientsecure.me/sign-in">Log In</a>
+          {/* <LoginModal id="login" /> */}
+          {/* </nav><a href="https://hopegrowsnv.clientsecure.me/sign-in">Log In</a>
             </li>
             <li>
               <Link to="/newClient" className="button primary">
                 Become a Client
               </Link>
             </li>
-          </ul>
+          </ul> */}
         </nav>
       </header>
 
@@ -195,6 +214,30 @@ export default function Layout({ children, landing = false }) {
           </li>
         </ul>
       </footer>
+      <div id="navButton">
+        {/* <button href="#navPanel" className="toggle" /> */}
+        <button
+          type="button"
+          className="toggle"
+          onClick={() => openSidebar()}
+        />
+      </div>
+      <div id="navPanel">
+        <nav>
+          <a className="link depth-0" href="/" style={{ webkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
+            <span className="indent-0" />
+            Welcome
+          </a>
+          <a className="link depth-0" href="/aboutUs" style={{ webkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
+            <span className="indent-0" />
+            Layouts
+          </a>
+          <a className="link depth-0" href="/" style={{ webkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
+            <span className="indent-0" />
+            Sign Up
+          </a>
+        </nav>
+      </div>
     </div>
   )
 }
