@@ -7,7 +7,7 @@ export default function newClient() {
       <article id="main">
         <header className="special container">
           {/* <span className="icon solid" /> */}
-          <h2>New Clients</h2>
+          <h2>Become a Client</h2>
         </header>
         {/* carousel of images?? */}
 
@@ -21,7 +21,7 @@ export default function newClient() {
                   <h3>You Do</h3>
                 </header>
                 <p>
-                  Fill out the form below with your contact information & submit. There is no commitment at this point, but you have just taken the first steps towards growing into a better you. Well done!
+                  Fill out the form below with your contact information & submit. There is no commitment at this point, but you have just taken the first steps towards growing into a healthier you. Well done!
                 </p>
               </section>
             </div>
@@ -32,7 +32,7 @@ export default function newClient() {
                   <h3>We Do</h3>
                 </header>
                 <p>
-                  We will be reach out to you within 48 hours to schedule your first appointment & send you a custom link to fill out some forms.
+                  We will be reaching out to you within the next 2 business days to see if we are a good fit, and, if we are, to get started on getting you set up for services.
                 </p>
               </section>
             </div>

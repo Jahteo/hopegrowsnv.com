@@ -75,7 +75,7 @@ export default function Layout({ children, landing = false }) {
             </li>
             <li>
               <Link to="/newClient" className="button primary">
-                Create an account
+                Become a Client
               </Link>
             </li>
           </ul>
