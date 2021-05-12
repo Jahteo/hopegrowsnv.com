@@ -234,7 +234,7 @@ export default function Layout({ children, landing = false }) {
               return buildSideLink(link)
             })}
           </nav>
-        ), document.getElementById('navPanel')),
+        ), document?.getElementById('navPanel')),
       )}
     </div>
   )
