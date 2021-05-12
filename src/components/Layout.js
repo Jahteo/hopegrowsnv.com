@@ -7,6 +7,7 @@ import useSiteMetadata from '../static_queries/useSiteMetadata'
 
 function useInitialAnimations() {
   setTimeout(() => {
+    // "document" is not available during server side rendering, so this allows build to succeed
     if (typeof document !== 'undefined') {
       document.body.classList.remove('is-preload')
     }
@@ -73,11 +74,15 @@ export default function Layout({ children, landing = false }) {
     require('smooth-scroll')('a[href*="#"]')
   }
   function toggleSidebar() {
-    setTimeout(() => { document.body.classList.toggle('navPanel-visible') }, 0)
+    if (typeof document !== 'undefined') {
+      setTimeout(() => { document.body.classList.toggle('navPanel-visible') }, 0)
+    }
   }
   function closeSidebar() {
-    if (document.body.classList.contains('navPanel-visible')) {
-      document.body.classList.remove('navPanel-visible')
+    if (typeof document !== 'undefined') {
+      if (document.body.classList.contains('navPanel-visible')) {
+        document.body.classList.remove('navPanel-visible')
+      }
     }
   }
 
