@@ -1,9 +1,9 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
 // import Helmet from 'react-helmet'
 import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
-import LoginModal from '../shared/LoginModal'
 
 function useInitialAnimations() {
   setTimeout(() => {
@@ -14,13 +14,55 @@ function useInitialAnimations() {
 }
 
 const navList = [
-  <Link to="/">Welcome</Link>,
-  <Link to="/aboutUs">Who We Are</Link>,
-  <Link to="/services">Services</Link>,
-  <Link to="/resources">Resources</Link>,
-  <a href="https://hopegrowsnv.clientsecure.me/sign-in">Log In</a>,
-  <Link to="/newClient" className="button primary">Become a Client</Link>,
+  {
+    to: '/',
+    label: 'Welcome',
+  },
+  {
+    to: '/aboutUs',
+    label: 'Who We Are',
+  },
+  {
+    to: '/services',
+    label: 'Services',
+  },
+  {
+    to: '/resources',
+    label: 'Resources',
+  },
+  {
+    to: 'https://hopegrowsnv.clientsecure.me/sign-in',
+    label: 'Log In',
+  },
+  {
+    to: '/newClient',
+    label: 'Become a Client',
+    className: 'button primary',
+  },
 ]
+function buildLink(link) {
+  if (link.to.includes('://')) {
+    return <a href={link.to} className={link.className} target="_blank" rel="noreferrer">{link.label}</a>
+  }
+  return <Link to={link.to} className={link.className}>{link.label}</Link>
+}
+function buildSideLink(link) {
+  if (
+    link.to.includes('://')) {
+    return (
+      <a href={link.to} className={`link depth-0 ${link.className}`}>
+        <span className="indent-0" />
+        {link.label}
+      </a>
+    )
+  }
+  return (
+    <Link to={link.to} className={`link depth-0 ${link.className}`}>
+      <span className="indent-0" />
+      {link.label}
+    </Link>
+  )
+}
 
 export default function Layout({ children, landing = false }) {
   useInitialAnimations()
@@ -30,25 +72,14 @@ export default function Layout({ children, landing = false }) {
     // eslint-disable-next-line global-require
     require('smooth-scroll')('a[href*="#"]')
   }
-  function openSidebar() {
-    // const body =
+  function toggleSidebar() {
+    setTimeout(() => { document.body.classList.toggle('navPanel-visible') }, 0)
   }
-
-  // let isHeaderSticky = true
-  // const observer = new IntersectionObserver(
-  //   (entries, observer) => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         /* Here's where we deal with every intersection */
-  //         isHeaderSticky = false
-  //         observer.unobserve(entry.target)
-  //       }
-  //     })
-  //   },
-  //   { rootMargin: '0px 0px -200px 0px' })
-  // const target = document.querySelector('banner')
-  // console.log(target)
-  // observer.observe(target)
+  function closeSidebar() {
+    if (document.body.classList.contains('navPanel-visible')) {
+      document.body.classList.remove('navPanel-visible')
+    }
+  }
 
   // <Helmet>
   //   <html lang="en" />
@@ -57,10 +88,10 @@ export default function Layout({ children, landing = false }) {
   // </Helmet>
 
   return (
-    <div id="page-wrapper">
+    // eslint-disable-next-line
+    <div id="page-wrapper" onClick={() => closeSidebar()}>
       {/* <!-- Header --> */}
       <header id="header" className={landing && 'alt'}>
-        {/* <header id="header"> */}
         <h1 id="logo">
           <Link to="/">
             <img src={logo} alt="Logo" id="logoTest" /> {title}
@@ -69,35 +100,9 @@ export default function Layout({ children, landing = false }) {
         <nav id="nav">
           <ul>
             {navList.map((link) => {
-              return (
-                <li>{link}</li>
-              )
+              return <li>{buildLink(link)}</li>
             })}
           </ul>
-          {/* <ul>
-            <li className="current">
-              <Link to="/">Welcome</Link>
-            </li>
-            <li>
-              <Link to="/aboutUs">Who We Are</Link>
-            </li>
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
-            <li>
-              <Link to="/resources">Resources</Link>
-            </li>
-            <li>
-              {/* <button type="button">B Log In</button> */}
-          {/* <LoginModal id="login" /> */}
-          {/* </nav><a href="https://hopegrowsnv.clientsecure.me/sign-in">Log In</a>
-            </li>
-            <li>
-              <Link to="/newClient" className="button primary">
-                Become a Client
-              </Link>
-            </li>
-          </ul> */}
         </nav>
       </header>
 
@@ -114,20 +119,10 @@ export default function Layout({ children, landing = false }) {
             <header>
               <h2>Hope Grows Counselling LLC</h2>
             </header>
-
-            {/* <section className="container">
-
-              <div className="row gtr-150">
-                <div className="col-4 col-12-narrower"> */}
-            {/* <!-- Sidebar --> */}
-            {/* <div className="sidebar"> */}
             <div id="innerHomeBanner">
               <section>
                 <img src={logo} alt="Logo of hands holding sapling" />
               </section>
-              {/* </div> */}
-              {/* </div> */}
-              {/* </div> */}
 
               {/* <div className="col-8 col-12-narrower imp-narrower"> */}
               {/* <!-- Content --> */}
@@ -145,7 +140,7 @@ export default function Layout({ children, landing = false }) {
                 <footer>
                   <ul className="buttons">
                     <li>
-                      <a href="mailto:hopehelp@hopegrowsnv.com" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
+                      <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
                     </li>
                     <li>
                       <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
@@ -182,7 +177,7 @@ export default function Layout({ children, landing = false }) {
               </a>
             </li>
             <li>
-              <a href="mailto:hopehelp@hopegrowsnv.com" className="button">
+              <a href="mailto:hopehelp@hopegrowsnv.com" className="button" target="_blank" rel="noreferrer">
                 Email us: hopehelp@hopegrowsnv.com
               </a>
             </li>
@@ -202,42 +197,33 @@ export default function Layout({ children, landing = false }) {
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="icon brands circle fa-facebook">
+            <a href="https://www.facebook.com/HopeGrowsNV" target="_blank" rel="noreferrer" className="icon brands circle fa-facebook">
               <span className="label">Facebook</span>
             </a>
           </li>
         </ul>
         <ul className="copyright">
-          <li>&copy; Josh Glantz</li>
+          <li><a href="https://github.com/Jahteo" target="_blank" rel="noreferrer">&copy; Josh Glantz</a></li>
           <li>
-            Design: <a href="http://html5up.net">HTML5 UP</a>
+            Design: <a href="http://html5up.net" target="_blank" rel="noreferrer">HTML5 UP</a>
           </li>
         </ul>
       </footer>
       <div id="navButton">
-        {/* <button href="#navPanel" className="toggle" /> */}
+        {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
         <button
           type="button"
           className="toggle"
-          onClick={() => openSidebar()}
+          onClick={() => toggleSidebar()}
         />
       </div>
-      <div id="navPanel">
+      {ReactDOM.createPortal((
         <nav>
-          <a className="link depth-0" href="/" style={{ webkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
-            <span className="indent-0" />
-            Welcome
-          </a>
-          <a className="link depth-0" href="/aboutUs" style={{ webkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
-            <span className="indent-0" />
-            Layouts
-          </a>
-          <a className="link depth-0" href="/" style={{ webkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
-            <span className="indent-0" />
-            Sign Up
-          </a>
+          {navList.map((link) => {
+            return buildSideLink(link)
+          })}
         </nav>
-      </div>
+      ), document.getElementById('navPanel'))}
     </div>
   )
 }

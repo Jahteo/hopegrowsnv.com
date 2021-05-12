@@ -10,7 +10,6 @@ export default function services() {
         <header className="special container">
           <span className="icon solid fa-tasks" />
           <h2>Services</h2>
-          {/* <p>sub header outside white goes here</p> */}
         </header>
 
         {/* <!-- Section One, NoSidebar --> */}
@@ -19,14 +18,12 @@ export default function services() {
           {/* <!-- Content --> */}
           <div className="content">
             <section>
-              {/* <div href="#" className="image featured"><img src="https://source.unsplash.com/800x450/?rural" alt="" /></div> */}
               <header>
                 <h2>Individual Therapy</h2>
               </header>
               <p>Our providers work with individual clients, using evidence-based practices, to aid clients in developing skills, understanding, and ways to process their mental health needs, challenges, and build resilience in the face of life’s struggles. We work to create a supportive and consistent environment where our clients feel safe and empowered to work on their wellness and toward their goals.</p>
             </section>
             <section>
-              {/* <div href="#" className="image featured"><img src="https://source.unsplash.com/800x450/?countryside" alt="" /></div> */}
               <header>
                 <h2>Family Therapy</h2>
               </header>
@@ -34,14 +31,12 @@ export default function services() {
               </p>
             </section>
             <section>
-              {/* <div href="#" className="image featured"><img src="https://source.unsplash.com/800x450/?field" alt="" /></div> */}
               <header>
                 <h2>Couples Therapy</h2>
               </header>
               <p>Our providers work to aid couples in gaining the skills and understanding to reduce conflict and support growth, be that in the domains of coupling, co-parenting, or whatever facet of life the couple feels they need assistance in managing in new and hopefully healthier ways.</p>
             </section>
             <section>
-              {/* <div href="#" className="image featured"><img src="https://source.unsplash.com/800x450/?landscape" alt="" /></div> */}
               <header>
                 <h2>Group Therapy</h2>
               </header>

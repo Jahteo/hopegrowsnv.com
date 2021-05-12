@@ -6,20 +6,6 @@ import Layout from '../components/Layout'
 export default function IndexPage() {
   return (
     <Layout landing>
-      {/* Todo: need to figure out how to properly use this with markdown. Instead of passing the markdown input as props, I'll actually be using the jsx component in the markdown file inside forestry, I think. */}
-      {/* <SpecialHeader
-        icon="fa-chart-bar"
-        header="As this is my **twentieth** freebie for HTML5 UP
-        <br />I decided to give it a really creative name."
-        paragraph="Turns out <strong>Twenty</strong> was the best I could come up with.
-        Anyway, lame name aside,
-        <br />
-        its minimally designed, fully responsive, built on HTML5/CSS3, and,
-        like all my stuff,
-        <br />
-        released for free under the
-        license. Have fun!"
-      /> */}
       <article id="main">
         <header className="special container">
           <span className="icon solid fa-door-open" />
@@ -37,9 +23,7 @@ export default function IndexPage() {
 
             {/* <!-- Content --> */}
             <div className="col-8 col-12-narrower imp-narrower">
-              {/* <div className="content"> */}
               <section>
-                {/* <a href="/" className="image featured"><img src="https://source.unsplash.com/V3dHmb1MOXM" alt="" /></a> */}
                 <header>
                   <h2>Services we offer</h2>
                 </header>
@@ -61,12 +45,11 @@ export default function IndexPage() {
                   </p>
                 </div>
               </section>
-              {/* </div> */}
             </div>
 
             {/* <!-- Sidebar --> */}
             <div className="col-4 col-12-narrower">
-              {/* <div className="sidebar"> */}
+              <div className="sidebar">
 
               <section>
                 <header>
@@ -86,7 +69,7 @@ export default function IndexPage() {
                 </footer>
               </section>
 
-              {/* </div> */}
+              </div>
             </div>
           </div>
         </section>

@@ -8,6 +8,11 @@ export default function aboutUs() {
   //   subTitle: null,
   //   content: 'We are a collection of providers and other team members coming together to do our best to provide our clients with the support and treatment to aid them in achieving their goals. The majority of our team have lived here in Nevada majority of our lives and we want to provide and support our fellow Nevadans in their journeys in health and wellness.',
   // }
+  // const people = [
+  //   {
+  //     name: "",
+  //   }
+  // ]
 
   return (
     <Layout>
@@ -20,7 +25,7 @@ export default function aboutUs() {
         </header>
 
         {/* <!-- Style Three from index --> */}
-        <section className="wrapper style3 container special">
+        {/* <section className="wrapper style3 container special">
           <header className="major">
             <h2>
               Front Desk
@@ -119,7 +124,7 @@ export default function aboutUs() {
             </div>
           </div>
 
-        </section>
+        </section> */}
       </article>
       {/* <NoSidebar props={data}>
         Testing

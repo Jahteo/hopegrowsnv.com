@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
+// DRAFT!!!
 export default function Appointments() {
   return (
     <Layout>
