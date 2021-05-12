@@ -5,12 +5,17 @@ import { Link } from 'gatsby'
 import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
+// "document" is not available during server side rendering, so this allows build to succeed
+function fixDocDuringBuild(code) {
+  if (typeof document !== 'undefined') {
+    return code
+  }
+  return null
+}
+
 function useInitialAnimations() {
   setTimeout(() => {
-    // "document" is not available during server side rendering, so this allows build to succeed
-    if (typeof document !== 'undefined') {
-      document.body.classList.remove('is-preload')
-    }
+    fixDocDuringBuild(document.body.classList.remove('is-preload'))
   }, 100)
 }
 
@@ -74,16 +79,16 @@ export default function Layout({ children, landing = false }) {
     require('smooth-scroll')('a[href*="#"]')
   }
   function toggleSidebar() {
-    if (typeof document !== 'undefined') {
-      setTimeout(() => { document.body.classList.toggle('navPanel-visible') }, 0)
-    }
+    fixDocDuringBuild(
+      setTimeout(() => { document.body.classList.toggle('navPanel-visible') }, 0),
+    )
   }
   function closeSidebar() {
-    if (typeof document !== 'undefined') {
-      if (document.body.classList.contains('navPanel-visible')) {
-        document.body.classList.remove('navPanel-visible')
-      }
-    }
+    fixDocDuringBuild(
+      document.body.classList.contains('navPanel-visible')
+        ? document.body.classList.remove('navPanel-visible') : null,
+
+    )
   }
 
   // <Helmet>
@@ -228,7 +233,7 @@ export default function Layout({ children, landing = false }) {
             return buildSideLink(link)
           })}
         </nav>
-      ), document.getElementById('navPanel'))}
+      ), fixDocDuringBuild(document.getElementById('navPanel')))}
     </div>
   )
 }
