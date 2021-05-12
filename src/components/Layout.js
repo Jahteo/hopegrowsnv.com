@@ -227,13 +227,15 @@ export default function Layout({ children, landing = false }) {
           onClick={() => toggleSidebar()}
         />
       </div>
-      {ReactDOM.createPortal((
-        <nav>
-          {navList.map((link) => {
-            return buildSideLink(link)
-          })}
-        </nav>
-      ), fixDocDuringBuild(document.getElementById('navPanel')))}
+      {fixDocDuringBuild(
+        ReactDOM.createPortal((
+          <nav>
+            {navList.map((link) => {
+              return buildSideLink(link)
+            })}
+          </nav>
+        ), document.getElementById('navPanel')),
+      )}
     </div>
   )
 }
