@@ -6,16 +6,18 @@ import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
 // "document" is not available during server side rendering, so this allows build to succeed
-function fixDocDuringBuild(code) {
-  if (typeof document !== 'undefined') {
-    return code
-  }
-  return null
-}
+// function fixDocDuringBuild(code) {
+//   if (typeof document !== 'undefined') {
+//     return code
+//   }
+//   return null
+// }
+const isBrowser = typeof document !== 'undefined'
 
 function useInitialAnimations() {
+  if (!isBrowser) return
   setTimeout(() => {
-    fixDocDuringBuild(document.body.classList.remove('is-preload'))
+    document.body.classList.remove('is-preload')
   }, 100)
 }
 
@@ -79,16 +81,14 @@ export default function Layout({ children, landing = false }) {
     require('smooth-scroll')('a[href*="#"]')
   }
   function toggleSidebar() {
-    fixDocDuringBuild(
-      setTimeout(() => { document.body.classList.toggle('navPanel-visible') }, 0),
-    )
+    if (!isBrowser) return
+    setTimeout(() => { document.body.classList.toggle('navPanel-visible') }, 0)
   }
   function closeSidebar() {
-    fixDocDuringBuild(
-      document.body.classList.contains('navPanel-visible')
-        ? document.body.classList.remove('navPanel-visible') : null,
-
-    )
+    if (!isBrowser) return
+    if (document.body.classList.contains('navPanel-visible')) {
+      document.body.classList.remove('navPanel-visible')
+    }
   }
 
   // <Helmet>
@@ -227,15 +227,14 @@ export default function Layout({ children, landing = false }) {
           onClick={() => toggleSidebar()}
         />
       </div>
-      {fixDocDuringBuild(
-        ReactDOM.createPortal((
+      {isBrowser
+        && ReactDOM.createPortal((
           <nav>
             {navList.map((link) => {
               return buildSideLink(link)
             })}
           </nav>
-        ), document?.getElementById('navPanel')),
-      )}
+        ), document.getElementById('navPanel'))}
     </div>
   )
 }
