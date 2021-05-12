@@ -57,11 +57,11 @@ export default function newClient() {
             <header>
               <h2>New Client Information</h2>
             </header>
-            <form target="_blank" action="https://formsubmit.co/1a159c46d07bdfc3e20518b5f9b453dc" method="POST">
+            <form target="_blank" action="https://formsubmit.co/bonnie@hopegrowsnv.com" method="POST">
               <input type="hidden" name="_template" value="box" />
               {/* <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html" /> */}
               <input type="hidden" name="_subject" value="New Client Submission from hopegrowsnv.com!" />
-              {/* <input type="text" name="_honey" style="display:none"> */}
+              {/* <input type="text" name="_honey" style={{ display: 'none' }} /> */}
               {/* Add this "honeypot" field to avoid spam by fooling scrapers. If a value is provided, the submission will be silently ignored. The input should be hidden with CSS. Use if they want to disable the reCaptcha */}
               <div className="form-group row gtr-50">
                 <label className="col-6 col-12-mobile">
@@ -75,6 +75,10 @@ export default function newClient() {
                 <label className="col-6 col-12-mobile">
                   Email Address:
                   <input type="email" name="email" placeholder="Email" required />
+                </label>
+                <label className="col-6 col-12-mobile">
+                  Phone Number:
+                  <input type="text" name="telephone" placeholder="" />
                 </label>
                 <label className="col-12">
                   We work with folks that are self-pay and those with health insurance. <br />
