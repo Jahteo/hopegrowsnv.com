@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
 // import Helmet from 'react-helmet'
-import logo from './images/logo/logo_03_white_ICON.jpg'
+import logo from './images/logo_sm.png'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
 // "document" is not available during server side rendering, so this allows build to succeed
@@ -126,18 +126,19 @@ export default function Layout({ children, landing = false }) {
             appropriate (<br />).
           --> */}
           <div className="inner">
-            <header>
+            {/* <header>
               <h2>Hope Grows Counselling LLC</h2>
-            </header>
-            <div id="innerHomeBanner">
-              <section>
-                <img src={logo} alt="Logo of hands holding sapling" />
+            </header> */}
+            <div id="innerHomeBanner" className="row">
+              {/* <div style={{ display: 'flex', flexDirection: 'row' }}> */}
+              <section className="col-6 col-12-narrower">
+                <img id="bannerLogo" src={logo} alt="Logo of hands holding sapling" />
               </section>
 
               {/* <div className="col-8 col-12-narrower imp-narrower"> */}
               {/* <!-- Content --> */}
               {/* <div className="content" /> */}
-              <section>
+              <section className="col-6 col-12-narrower">
                 <p>
                   Providing compassionate and quality care
                   <br />
@@ -159,6 +160,7 @@ export default function Layout({ children, landing = false }) {
                 </footer>
               </section>
             </div>
+            {/* </div> */}
             {/* </section> */}
           </div>
         </section>
