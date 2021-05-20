@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import { Fade } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import UnionH1 from './images/1200_wide_backround/Dayton_UnionHotel1_1200_Wide.jpeg'
+import UnionH2 from './images/1200_wide_backround/Dayton_UnionHotel2_1200_Wide.jpeg'
+import UnionH3 from './images/1200_wide_backround/Dayton_UnionHotel3_1200_Wide.jpeg'
 // import Helmet from 'react-helmet'
 import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
@@ -25,9 +27,8 @@ function useInitialAnimations() {
 }
 const fadeImages = [
   UnionH1,
-  './images/1200_wide_backround/Dayton_UnionHotel1_1200_Wide.jpeg',
-  'images/1200_wide_backround/Dayton_UnionHotel2_1200_Wide.jpeg',
-  'images/1200_wide_backround/Dayton_UnionHotel3_1200_Wide.jpeg',
+  UnionH2,
+  UnionH3,
 ]
 
 const navList = [
@@ -131,58 +132,52 @@ export default function Layout({ children, landing = false }) {
           <Fade>
             {fadeImages.map((fadeImg, index) => {
               return (
-                <div style={{ backgroundImage: `url(${fadeImg})` }}>
-                  <h2>{index} Slide</h2>
-                </div>
-              )
-            })}
-            <div style={{ backgroundImage: `url(${fadeImages[0]})` }}>
-              <h2>extra Slide</h2>
-            </div>
-            {/* the inner div below is the content I'll actually be using inside. */}
-            {/* <!--
+              /* <!--
             ".inner" is set up as an inline-block so it automatically expands
             in both directions to fit whatever's inside it. This means it won't
             automatically wrap lines, so be sure to use line breaks where
             appropriate (<br />).
-          --> */}
-            <div id="banner" style={{ backgroundImage: `url(${fadeImages[0]})` }}>
-              <div className="inner">
-                <header>
-                  <h2>Hope Grows Counselling LLC</h2>
-                </header>
-                <div id="innerHomeBanner">
-                  <section>
-                    <img src={logo} alt="Logo of hands holding sapling" />
-                  </section>
+          --> */
+                <div id="banner" style={{ backgroundImage: `url(${fadeImg})` }}>
+                  <div className="inner">
+                    <header>
+                      <h2>Hope Grows Counselling LLC</h2>
+                    </header>
+                    <div id="innerHomeBanner">
+                      <section>
+                        <img src={logo} alt="Logo of hands holding sapling" />
+                      </section>
 
-                  {/* <div className="col-8 col-12-narrower imp-narrower"> */}
-                  {/* <!-- Content --> */}
-                  {/* <div className="content" /> */}
-                  <section>
-                    <p>
-                      Providing compassionate and quality care
-                      <br />
-                      for rural and urban Nevadans alike.
-                      <br />
-                      We're here & ready to help
-                      <br />
-                    </p>
-                    {/* <i>(also, there will be a local picture behind here, cycling slowly)</i> */}
-                    <footer>
-                      <ul className="buttons">
-                        <li>
-                          <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
-                        </li>
-                        <li>
-                          <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
-                        </li>
-                      </ul>
-                    </footer>
-                  </section>
+                      {/* <div className="col-8 col-12-narrower imp-narrower"> */}
+                      {/* <!-- Content --> */}
+                      {/* <div className="content" /> */}
+                      <section>
+                        <p>
+                          Providing compassionate and quality care
+                          <br />
+                          for rural and urban Nevadans alike.
+                          <br />
+                          We're here & ready to help
+                          <br />
+                        </p>
+                        {/* <i>(also, there will be a local picture behind here, cycling slowly)</i> */}
+                        <footer>
+                          <ul className="buttons">
+                            <li>
+                              <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
+                            </li>
+                            <li>
+                              <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
+                            </li>
+                          </ul>
+                        </footer>
+                      </section>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+
+              )
+            })}
           </Fade>
         </section>
       )}
