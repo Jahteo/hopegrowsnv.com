@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
 import { Fade } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
-import UnionH1 from './images/1200_wide_backround/Dayton_UnionHotel1_1200_Wide.jpeg'
-import UnionH2 from './images/1200_wide_backround/Dayton_UnionHotel2_1200_Wide.jpeg'
-import UnionH3 from './images/1200_wide_backround/Dayton_UnionHotel3_1200_Wide.jpeg'
+import { allImgs1200W } from './images/1200_wide_backround/all_images_1200w'
 // import Helmet from 'react-helmet'
 import logo from './images/logo/logo_03_white_ICON.jpg'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
@@ -25,11 +23,13 @@ function useInitialAnimations() {
     document.body.classList.remove('is-preload')
   }, 100)
 }
-const fadeImages = [
-  UnionH1,
-  UnionH2,
-  UnionH3,
-]
+
+const fadeOutProperties = {
+  arrows: false,
+  indicators: true,
+  // scale: 0.4,
+  // indicators: i => (<div className="indicator">{i + 1}</div>)
+}
 
 const navList = [
   {
@@ -85,6 +85,7 @@ function buildSideLink(link) {
 export default function Layout({ children, landing = false }) {
   useInitialAnimations()
   const { title } = useSiteMetadata()
+  const shuffledImgs = allImgs1200W.sort((a, b) => 0.5 - Math.random())
 
   if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
@@ -129,8 +130,8 @@ export default function Layout({ children, landing = false }) {
       {/* <!-- Banner --> */}
       {landing && (
         <section className="slide-container">
-          <Fade>
-            {fadeImages.map((fadeImg, index) => {
+          <Fade {...fadeOutProperties}>
+            {shuffledImgs.map((fadeImg) => {
               return (
               /* <!--
             ".inner" is set up as an inline-block so it automatically expands
