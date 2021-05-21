@@ -27,8 +27,6 @@ function useInitialAnimations() {
 const fadeOutProperties = {
   arrows: false,
   indicators: true,
-  // scale: 0.4,
-  // indicators: i => (<div className="indicator">{i + 1}</div>)
 }
 
 const navList = [
@@ -140,35 +138,37 @@ export default function Layout({ children, landing = false }) {
             appropriate (<br />).
           --> */
                 <div id="banner" style={{ backgroundImage: `url(${fadeImg})` }}>
-                  <div id="innerHomeBanner" className="row">
-                    <section className="col-6 col-12-narrower">
-                      <img id="bannerLogo" src={logo} alt="Logo of hands holding sapling" />
-                    </section>
+                  <div className="inner">
+                    <div id="innerHomeBanner" className="row">
+                      <section className="col-6 col-12-narrower">
+                        <img id="bannerLogo" src={logo} alt="Logo of hands holding sapling" />
+                      </section>
 
-                    {/* <!-- Content --> */}
-                    <section className="col-6 col-12-narrower">
-                      <p>
-                        Providing compassionate and quality care
-                        <br />
-                        for rural and urban Nevadans alike.
-                        <br />
-                        We're here & ready to help
-                        <br />
-                      </p>
-                      <footer>
-                        <ul className="buttons">
-                          <li>
-                            <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
-                          </li>
-                          <li>
-                            <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
-                          </li>
-                        </ul>
-                      </footer>
-                    </section>
+                      {/* <!-- Content --> */}
+                      <section className="col-6 col-12-narrower">
+                        <p>
+                          Providing compassionate and quality care
+                          <br />
+                          {/* eslint-disable-next-line */}
+                          for rural and urban Nevadans alike.
+                          <br /> &nbsp;
+                          We're here & ready to help
+                          <br />
+                        </p>
+                        <footer>
+                          <ul className="buttons">
+                            <li>
+                              <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
+                            </li>
+                            <li>
+                              <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
+                            </li>
+                          </ul>
+                        </footer>
+                      </section>
+                    </div>
                   </div>
                 </div>
-
               )
             })}
           </Fade>

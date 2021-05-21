@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import AltBanner from '../components/AltBanner'
 // import NoSidebar from '../components/NoSidebar'
 
 export default function aboutUs() {
@@ -16,11 +17,13 @@ export default function aboutUs() {
 
   return (
     <Layout>
+      <title>Information about Hope Grows and our staff</title>
       <article id="main">
+        <AltBanner pageName="Our Team" />
+        <header className="container">
+        {/* <header className="special container"> */}
+          {/* <span className="icon solid fa-users" /> */}
 
-        <header className="special container">
-          <span className="icon solid fa-users" />
-          <h2>Our Team</h2>
           <p>We are a collection of providers and other team members coming together to do our best to provide our clients with the support and treatment to aid them in achieving their goals. The majority of our team have lived here in Nevada majority of our lives and we want to provide and support our fellow Nevadans in their journeys in health and wellness.</p>
         </header>
 

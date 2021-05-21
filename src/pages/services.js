@@ -1,17 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import AltBanner from '../components/AltBanner'
 
 export default function services() {
   return (
     <Layout>
-
+      <title>Descriptions of services offered</title>
       <article id="main">
-
-        <header className="special container">
-          <span className="icon solid fa-tasks" />
-          <h2>Services</h2>
-        </header>
-
+        <AltBanner pageName="Services" />
         {/* <!-- Section One, NoSidebar --> */}
         <section className="wrapper style3 container special">
 

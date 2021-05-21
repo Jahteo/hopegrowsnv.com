@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import AltBanner from '../components/AltBanner'
 import Layout from '../components/Layout'
 
 export default function resources() {
@@ -248,12 +249,10 @@ export default function resources() {
   ]
   return (
     <Layout>
-
+      <title>List of community resouces</title>
       <article id="main">
-
-        <header className="special container">
-          <span className="icon solid fa-tasks" />
-          <h2>Resources</h2>
+        <AltBanner pageName="Resources" />
+        <header className="container">
           <p>We at Hope Grows believe that mental health is only one piece of the puzzle when it comes to a person’s wellness and ability to manage both their responsibilities and achieve their goals. Below you will find a list of community resources that can aid in different facets of one’s life.</p> <br />
           {/* Scrolling buttons */}
           <section className="wrapper style1 container special">

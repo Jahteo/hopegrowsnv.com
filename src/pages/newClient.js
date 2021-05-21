@@ -1,15 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import AltBanner from '../components/AltBanner'
 
 export default function newClient() {
   return (
     <Layout>
+      <title>Information and forms to become a new client</title>
       <article id="main">
-        <header className="special container">
-          {/* <span className="icon solid" /> */}
-          <h2>Become a Client</h2>
-        </header>
-        {/* carousel of images?? */}
+        <AltBanner pageName="Become a Client" />
 
         {/* instructions/expectations */}
         <section className="wrapper style1 container special">

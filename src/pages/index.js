@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 export default function IndexPage() {
   return (
     <Layout landing>
+      <title>Homepage</title>
       <article id="main">
         <header className="special container">
           <span className="icon solid fa-door-open" />

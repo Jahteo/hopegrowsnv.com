@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
+import AltBanner from '../components/AltBanner'
 
 export default function NotFound() {
   return (
     <Layout>
-      <article>
-
+      <title>Page not found</title>
+      <article id="main">
+        <AltBanner pageName="Oops!" />
         <header className="special container">
-          <span className="icon solid fa-users" />
-          <h2>Oops</h2> <br />
+          {/* <span className="icon solid fa-users" /> */}
           <Link to="/">
             <h1>Sorry, couldn't find that page.</h1>
           </Link>
