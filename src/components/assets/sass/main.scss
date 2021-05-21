@@ -437,6 +437,13 @@ $pattern-background-size: 25em;
 		}
 	}
 
+	#bannerLogo {
+		padding: 25px;
+		// border-radius: 15%;
+		max-width: 350px;
+		background-color: rgba(255, 255, 255, 0.503);
+	}
+
 /* Icon */
 	#logoTest {
 		max-height: 1.5em !important;
@@ -971,12 +978,7 @@ $pattern-background-size: 25em;
 		background-attachment: fixed;
 		// background-image: url('../../images/1200_wide_backround/Fallon_Stillwater3_1200_Wide.jpeg');
 		background-color: _palette(three, bg);
-		// background-image: url('../../images/1200_wide_backround/Fallon_Stillwater3_1200_Wide.jpeg');
-		background-position:  top center;
-		background-repeat: no-repeat;
-		background-size: cover;
 		background-position: center;
-		background-repeat: none;
 		background-repeat:  no-repeat;
 		background-size: cover;
 		color: _palette(banner, fg);
@@ -988,7 +990,8 @@ $pattern-background-size: 25em;
 			@include vendor('animation', 'reveal-banner 1s 0.25s ease-in-out');
 			@include vendor('animation-fill-mode', 'forwards');
 			// background: transparentize(_palette(banner, inner-bg), 0.5);
-			background: rgba(0, 104, 146, 0.5);
+			// background: rgba(0, 104, 146, 0.5);
+			background: rgba(100, 100, 100, 0.5);
 			color: _palette(banner, inner-fg);
 			display: inline-block;
 			opacity: 0;
@@ -1067,21 +1070,6 @@ $pattern-background-size: 25em;
 
 /* CTA */
 
-	// #cta {
-	// 	background-attachment: scroll, scroll, scroll, fixed;
-	// 	background-color: _palette(three, bg);
-	// 	background-image: "./images/light-tl.svg", "./images/light-tr.svg", "./images/overlay.png", "../../images/banner.jpg";
-	// 	background-position: top left, top right, top left, bottom center;
-	// 	background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-	// 	background-size: $pattern-background-size, $pattern-background-size, auto, cover;
-	// 	color: _palette(three, fg);
-	// 	padding: 5em;
-	// 	text-align: center;
-
-	// 	header {
-	// 		margin-bottom: 2em;
-	// 	}
-	// }
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
 			background-color: _palette(three, bg);

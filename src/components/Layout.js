@@ -5,7 +5,7 @@ import { Fade } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import { allImgs1200W } from './images/1200_wide_backround/all_images_1200w'
 // import Helmet from 'react-helmet'
-import logo from './images/logo/logo_03_white_ICON.jpg'
+import logo from './images/logo_sm.png'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
 // "document" is not available during server side rendering, so this allows build to succeed
@@ -140,40 +140,32 @@ export default function Layout({ children, landing = false }) {
             appropriate (<br />).
           --> */
                 <div id="banner" style={{ backgroundImage: `url(${fadeImg})` }}>
-                  <div className="inner">
-                    <header>
-                      <h2>Hope Grows Counselling LLC</h2>
-                    </header>
-                    <div id="innerHomeBanner">
-                      <section>
-                        <img src={logo} alt="Logo of hands holding sapling" />
-                      </section>
+                  <div id="innerHomeBanner" className="row">
+                    <section className="col-6 col-12-narrower">
+                      <img id="bannerLogo" src={logo} alt="Logo of hands holding sapling" />
+                    </section>
 
-                      {/* <div className="col-8 col-12-narrower imp-narrower"> */}
-                      {/* <!-- Content --> */}
-                      {/* <div className="content" /> */}
-                      <section>
-                        <p>
-                          Providing compassionate and quality care
-                          <br />
-                          for rural and urban Nevadans alike.
-                          <br />
-                          We're here & ready to help
-                          <br />
-                        </p>
-                        {/* <i>(also, there will be a local picture behind here, cycling slowly)</i> */}
-                        <footer>
-                          <ul className="buttons">
-                            <li>
-                              <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
-                            </li>
-                            <li>
-                              <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
-                            </li>
-                          </ul>
-                        </footer>
-                      </section>
-                    </div>
+                    {/* <!-- Content --> */}
+                    <section className="col-6 col-12-narrower">
+                      <p>
+                        Providing compassionate and quality care
+                        <br />
+                        for rural and urban Nevadans alike.
+                        <br />
+                        We're here & ready to help
+                        <br />
+                      </p>
+                      <footer>
+                        <ul className="buttons">
+                          <li>
+                            <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
+                          </li>
+                          <li>
+                            <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
+                          </li>
+                        </ul>
+                      </footer>
+                    </section>
                   </div>
                 </div>
 
