@@ -228,7 +228,7 @@ export default function Layout({ children, landing = false }) {
             Website: <a href="https://github.com/Jahteo" target="_blank" rel="noreferrer">&copy; Josh Glantz</a>
           </li>
           <li>
-            Photography: <a href="https://www.facebook.com/Miah.Bentley" target="_blank" rel="noreferrer">&copy; Jeremiah Bentley</a>
+            Photography: <a href="https://www.instagram.com/jbentleyphotos/" target="_blank" rel="noreferrer">&copy; Jeremiah Bentley</a>
           </li>
           <li>
             Design: <a href="http://html5up.net" target="_blank" rel="noreferrer">HTML5 UP</a>
