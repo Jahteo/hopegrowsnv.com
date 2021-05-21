@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
+import { Fade } from 'react-slideshow-image'
+import 'react-slideshow-image/dist/styles.css'
+import { allImgs1200W } from './images/1200_wide_backround/all_images_1200w'
 // import Helmet from 'react-helmet'
 import logo from './images/logo_sm.png'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
@@ -19,6 +22,13 @@ function useInitialAnimations() {
   setTimeout(() => {
     document.body.classList.remove('is-preload')
   }, 100)
+}
+
+const fadeOutProperties = {
+  arrows: false,
+  indicators: true,
+  // scale: 0.4,
+  // indicators: i => (<div className="indicator">{i + 1}</div>)
 }
 
 const navList = [
@@ -75,6 +85,7 @@ function buildSideLink(link) {
 export default function Layout({ children, landing = false }) {
   useInitialAnimations()
   const { title } = useSiteMetadata()
+  const shuffledImgs = allImgs1200W.sort((a, b) => 0.5 - Math.random())
 
   if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
@@ -118,51 +129,49 @@ export default function Layout({ children, landing = false }) {
 
       {/* <!-- Banner --> */}
       {landing && (
-        <section id="banner">
-          {/* <!--
+        <section className="slide-container">
+          <Fade {...fadeOutProperties}>
+            {shuffledImgs.map((fadeImg) => {
+              return (
+              /* <!--
             ".inner" is set up as an inline-block so it automatically expands
             in both directions to fit whatever's inside it. This means it won't
             automatically wrap lines, so be sure to use line breaks where
             appropriate (<br />).
-          --> */}
-          <div className="inner">
-            {/* <header>
-              <h2>Hope Grows Counselling LLC</h2>
-            </header> */}
-            <div id="innerHomeBanner" className="row">
-              {/* <div style={{ display: 'flex', flexDirection: 'row' }}> */}
-              <section className="col-6 col-12-narrower">
-                <img id="bannerLogo" src={logo} alt="Logo of hands holding sapling" />
-              </section>
+          --> */
+                <div id="banner" style={{ backgroundImage: `url(${fadeImg})` }}>
+                  <div id="innerHomeBanner" className="row">
+                    <section className="col-6 col-12-narrower">
+                      <img id="bannerLogo" src={logo} alt="Logo of hands holding sapling" />
+                    </section>
 
-              {/* <div className="col-8 col-12-narrower imp-narrower"> */}
-              {/* <!-- Content --> */}
-              {/* <div className="content" /> */}
-              <section className="col-6 col-12-narrower">
-                <p>
-                  Providing compassionate and quality care
-                  <br />
-                  for rural and urban Nevadans alike.
-                  <br />
-                  We're here & ready to help
-                  <br />
-                </p>
-                {/* <i>(also, there will be a local picture behind here, cycling slowly)</i> */}
-                <footer>
-                  <ul className="buttons">
-                    <li>
-                      <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
-                    </li>
-                    <li>
-                      <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
-                    </li>
-                  </ul>
-                </footer>
-              </section>
-            </div>
-            {/* </div> */}
-            {/* </section> */}
-          </div>
+                    {/* <!-- Content --> */}
+                    <section className="col-6 col-12-narrower">
+                      <p>
+                        Providing compassionate and quality care
+                        <br />
+                        for rural and urban Nevadans alike.
+                        <br />
+                        We're here & ready to help
+                        <br />
+                      </p>
+                      <footer>
+                        <ul className="buttons">
+                          <li>
+                            <a href="mailto:hopehelp@hopegrowsnv.com" target="_blank" rel="noreferrer" className="button fit scrolly"> hopehelp@hopegrowsnv.com</a>
+                          </li>
+                          <li>
+                            <a href="tel:+17755614328" className="button fit scrolly">(775) 561-4328</a>
+                          </li>
+                        </ul>
+                      </footer>
+                    </section>
+                  </div>
+                </div>
+
+              )
+            })}
+          </Fade>
         </section>
       )}
 
