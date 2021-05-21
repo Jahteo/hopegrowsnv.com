@@ -224,7 +224,12 @@ export default function Layout({ children, landing = false }) {
           </li>
         </ul>
         <ul className="copyright">
-          <li><a href="https://github.com/Jahteo" target="_blank" rel="noreferrer">&copy; Josh Glantz</a></li>
+          <li>
+            Website: <a href="https://github.com/Jahteo" target="_blank" rel="noreferrer">&copy; Josh Glantz</a>
+          </li>
+          <li>
+            Photography: <a href="https://www.facebook.com/Miah.Bentley" target="_blank" rel="noreferrer">&copy; Jeremiah Bentley</a>
+          </li>
           <li>
             Design: <a href="http://html5up.net" target="_blank" rel="noreferrer">HTML5 UP</a>
           </li>
