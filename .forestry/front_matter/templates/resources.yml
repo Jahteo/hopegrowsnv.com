@@ -8,205 +8,38 @@ fields:
   required: true
 - type: field_group_list
   name: resourceSections
-  label: Resource Nav Buttons
+  label: Resource Sections
   fields:
   - type: text
     name: name
     label: Name
     required: true
   - type: text
-    name: toID
-    label: toID
-    description: navigates to which section on page
+    name: id
+    label: id
+    description: needed for navigation and behind-the-scenes. no spaces!
     required: true
+  - type: field_group_list
+    name: listings
+    label: Listings
+    fields:
+    - type: text
+      name: name
+      label: Name
+      required: true
+    - type: text
+      name: tel
+      label: Telephone Number
+      required: false
+    - type: text
+      name: address
+      label: Address
+      required: false
+    - type: text
+      name: url
+      label: Website URL
+      description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
+      required: false
   hidden: false
-- type: field_group_list
-  name: foodBanks
-  label: Food Banks
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-- type: field_group_list
-  name: medicals
-  label: Medical
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
-- type: field_group_list
-  name: medicaidWelfares
-  label: Medicaid & Welfares
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
-- type: field_group_list
-  name: crisisLines
-  label: Crisis Lines
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
-- type: field_group_list
-  name: legalAides
-  label: Legal Aides
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
-- type: field_group_list
-  name: DCFSOffices
-  label: DCFS Offices
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
-- type: field_group_list
-  name: schoolResources
-  label: School Resources
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
-- type: field_group_list
-  name: housings
-  label: Housing
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
-- type: field_group_list
-  name: utilities
-  label: Utilities
-  fields:
-  - type: text
-    name: name
-    label: Name
-    required: true
-  - type: text
-    name: tel
-    label: Telephone Number
-    required: false
-  - type: text
-    name: address
-    label: Address
-    required: false
-  - type: text
-    name: url
-    label: Website URL
-    description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
-    required: false
 pages:
 - src/data/resources.json
