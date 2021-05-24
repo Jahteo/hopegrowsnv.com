@@ -60,7 +60,6 @@ fields:
     label: Website URL
     description: 'do not include the "www." Ex: use hopegrowsnv.com NOT www.hopegrowsnv.com'
     required: false
-    required: false
 - type: field_group_list
   name: medicaidWelfares
   label: Medicaid & Welfares

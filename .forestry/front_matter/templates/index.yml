@@ -21,6 +21,6 @@ fields:
   config:
     use_select: false
     min: 1
-    max:
+    max: 
 pages:
 - src/data/index.json
