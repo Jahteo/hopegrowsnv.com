@@ -6,6 +6,7 @@ import 'react-slideshow-image/dist/styles.css'
 import { allImgs1200W } from './images/1200_wide_backround/all_images_1200w'
 // import Helmet from 'react-helmet'
 import logo from './images/logo_sm.png'
+import leavesLogo from './images/LogoLeaves.png'
 import useSiteMetadata from '../static_queries/useSiteMetadata'
 
 // "document" is not available during server side rendering, so this allows build to succeed
@@ -118,7 +119,7 @@ export default function Layout({ children, landing = false }) {
       <header id="header" className={landing && 'alt'}>
         <h1 id="logo">
           <Link to="/">
-            <img src={logo} alt="Logo" id="logoTest" /> {title}
+            <img src={leavesLogo} alt="Logo" id="logoTest" /> {title}
           </Link>
         </h1>
         <nav id="nav">
