@@ -21,6 +21,9 @@ sections:
 - type: document
   path: src/data/resources.json
   label: Resources
+- type: document
+  path: src/data/services.json
+  label: Services
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
