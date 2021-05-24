@@ -2,6 +2,9 @@
 label: Staff
 hide_body: true
 fields:
+- type: boolean
+  name: display
+  label: Display Staff?
 - type: field_group_list
   name: items
   label: Items
