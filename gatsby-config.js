@@ -9,6 +9,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sharp',
       options: {
         defaultQuality: 75,
