@@ -1,0 +1,25 @@
+{
+  "bannerHeader": "Opening the door to mental health services",
+  "bannerContent": "We at Hope Grows are committed to bringing competent and thoughtful mental health professionals to our community. Our goal is to grow a robust set of mental health services to meet the needs of the people we serve. Historically it has been challenging for many to be able to access mental health services in our community and we hope we will be able to begin to change this fact.",
+  "servicesContent": "Hope Grows works to provide evidence-based treatments to help our clients manage the mental health challenges. Below are some of the challenges we help treat:",
+  "servicesList": [
+    "Depression",
+    "Anxiety",
+    "PTSD",
+    "Trauma",
+    "Phobias",
+    "Interpersonal Conflict",
+    "Stress Management",
+    "Struggles with Grief and Loss",
+    "Panic Attacks",
+    "Anger Management",
+    "Bipolar Disorder",
+    "Substance Abuse"
+  ],
+  "whoWeServeList": [
+    "Individuals",
+    "Families",
+    "Couples",
+    "Groups"
+  ]
+}
