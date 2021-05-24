@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: 
+webhook_url:
 sections:
 - type: directory
   path: src/pages
@@ -13,8 +13,8 @@ sections:
   templates:
   - page
 - type: document
-  path: src/data/staff.json
-  label: Staff
+  path: src/data/aboutUs.json
+  label: About Us
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''

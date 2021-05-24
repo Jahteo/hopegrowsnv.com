@@ -5,9 +5,13 @@ fields:
 - type: boolean
   name: display
   label: Display Staff?
+- type: textarea
+  name: content
+  label: Content
+  required: true
 - type: field_group_list
-  name: items
-  label: Items
+  name: staff
+  label: Staff
   fields:
   - type: text
     name: name
@@ -40,4 +44,4 @@ fields:
     label: Bio
     required: true
 pages:
-- src/data/staff.json
+- src/data/aboutUs.json
