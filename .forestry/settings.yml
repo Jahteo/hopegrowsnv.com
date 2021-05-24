@@ -18,6 +18,9 @@ sections:
 - type: document
   path: src/data/aboutUs.json
   label: About Us
+- type: document
+  path: src/data/resources.json
+  label: Resources
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''

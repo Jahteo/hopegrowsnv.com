@@ -33,22 +33,27 @@ const navList = [
   {
     to: '/',
     label: 'Welcome',
+    className: '',
   },
   {
     to: '/aboutUs',
     label: 'Who We Are',
+    className: '',
   },
   {
     to: '/services',
     label: 'Services',
+    className: '',
   },
   {
     to: '/resources',
     label: 'Resources',
+    className: '',
   },
   {
     to: 'https://hopegrowsnv.clientsecure.me/sign-in',
     label: 'Log In',
+    className: '',
   },
   {
     to: '/newClient',

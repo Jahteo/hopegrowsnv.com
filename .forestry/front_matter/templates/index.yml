@@ -1,0 +1,26 @@
+---
+label: Home Page
+hide_body: true
+fields:
+- type: text
+  name: bannerHeader
+  label: Banner Header
+  required: true
+- type: textarea
+  name: bannerContent
+  label: Banner Content
+  required: true
+- type: textarea
+  name: servicesContent
+  label: Services Content
+  required: true
+- type: list
+  name: servicesList
+  label: Services List
+  hidden: false
+  config:
+    use_select: false
+    min: 1
+    max:
+pages:
+- src/data/index.json
