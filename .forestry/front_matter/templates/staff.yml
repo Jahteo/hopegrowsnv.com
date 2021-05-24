@@ -1,0 +1,38 @@
+---
+label: Staff
+hide_body: true
+fields:
+- type: field_group_list
+  name: items
+  label: Items
+  fields:
+  - type: text
+    name: name
+    label: Name
+    required: true
+  - type: select
+    name: role
+    label: Role
+    required: true
+    config:
+      source:
+        type: custom
+      options:
+          - "Provider"
+          - "Front Desk"
+  - type: file
+    name: image
+    label: Image
+    description: Square image, Max 500 pixels
+    required: true
+  - type: text
+    name: imageAlt
+    label: Image Description
+    description: "For accessibility. ex: Nell Thomas, a white woman with short black hair, is outside on a bright day. She wears thick, black-rimmed glasses and smiles at the camera."
+    required: true
+  - type: textarea
+    name: bio
+    label: Bio
+    required: true
+pages:
+- src/data/staff.json

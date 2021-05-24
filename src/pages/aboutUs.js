@@ -1,9 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import AltBanner from '../components/AltBanner'
+import data from '../data/staff.json'
 // import NoSidebar from '../components/NoSidebar'
 
 export default function aboutUs() {
+  console.log(data.items)
   // const data = {
   //   title: 'Our Team',
   //   subTitle: null,
