@@ -5,8 +5,9 @@
   "version": "0.1.0",
   "author": "Josh Glantz <Jahteo@gmail.com>",
   "scripts": {
-    "build": "gatsby build",
+    "eslint": "eslint .",
     "dev": "gatsby develop -o",
+    "build": "gatsby build",
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
   },
   "prettier": {
