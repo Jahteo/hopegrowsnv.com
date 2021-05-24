@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
-// import SpecialHeader from '../shared/SpecialHeader'
+import data from '../data/index.json'
 
 export default function IndexPage() {
   return (
@@ -11,10 +11,10 @@ export default function IndexPage() {
         <header className="special container">
           <span className="icon solid fa-door-open" />
           <h2>
-            Opening the door to mental health services
+            {data.bannerHeader}
           </h2>
           <p>
-            We at Hope Grows are committed to bringing competent and thoughtful mental health professionals to our community. Our goal is to grow a robust set of mental health services to meet the needs of the people we serve. Historically it has been challenging for many to be able to access mental health services in our community and we hope we will be able to begin to change this fact.
+            {data.bannerContent}
           </p>
         </header>
 
@@ -28,21 +28,13 @@ export default function IndexPage() {
                 <header>
                   <h2>Services we offer</h2>
                 </header>
-                <p>Hope Grows works to provide evidence based treatments to help our clients manage the mental health challenges. Below are some of the challenges we help treat:</p>
+                <p>{data.servicesContent}</p>
                 <div>
 
-                  <p>Depression<br />
-                    Anxiety<br />
-                    PTSD<br />
-                    Trauma<br />
-                    Phobias<br />
-                    Interpersonal Conflict<br />
-                    Stress Management<br />
-                    Struggles with Grief and Loss<br />
-                    Panic Attacks<br />
-                    Anger Management<br />
-                    Bipolar Disorder<br />
-                    Substance Abuse<br />
+                  <p>
+                    {data.servicesList.map((service) => {
+                      return <> {service} <br /></>
+                    })}
                   </p>
                 </div>
               </section>
@@ -52,23 +44,22 @@ export default function IndexPage() {
             <div className="col-4 col-12-narrower">
               <div className="sidebar">
 
-              <section>
-                <header>
-                  <h2>Who We Serve</h2>
-                </header>
-              </section>
+                <section>
+                  <header>
+                    <h2>Who We Serve</h2>
+                  </header>
+                </section>
 
-              <section>
-                  <h3>Individuals</h3>
-                  <h3>Families</h3>
-                  <h3>Couples</h3>
-                  <h3>Groups</h3>
-                <footer>
-                  <ul className="buttons">
-                    <li><Link href="/services" className="button small">Learn More</Link></li>
-                  </ul>
-                </footer>
-              </section>
+                <section>
+                  {data.whoWeServeList.map((group) => {
+                    return <h3>{group}</h3>
+                  })}
+                  <footer>
+                    <ul className="buttons">
+                      <li><Link href="/services" className="button small">Learn More</Link></li>
+                    </ul>
+                  </footer>
+                </section>
 
               </div>
             </div>

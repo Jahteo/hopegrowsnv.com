@@ -4,9 +4,6 @@ import AltBanner from '../components/AltBanner'
 import data from '../data/aboutUs.json'
 
 export default function aboutUs() {
-  console.log(data.staff)
-  console.log(data.display)
-
   return (
     <Layout>
       <title>Information about Hope Grows and our staff</title>
@@ -19,111 +16,65 @@ export default function aboutUs() {
           <p>{data.content}</p>
         </header>
 
-        {/* <!-- Style Three from index --> */}
-        {/* <section className="wrapper style3 container special">
-          <header className="major">
-            <h2>
-              Front Desk
-            </h2>
-          </header>
+        {data.display
+           && (
+             <section className="wrapper style3 container special">
+               <header className="major">
+                 <h2>
+                   Front Desk
+                 </h2>
+               </header>
 
-          <div className="row">
-            <div className="col-6 col-12-narrower">
-              <section>
-                <div className="image featured">
-                  <img src="https://source.unsplash.com/800x450/?smiling, headshot,1" alt="" />
-                </div>
-                <header>
-                  <h3>Person 1</h3>
-                </header>
-                <p>
-                  Bio
-                </p>
-              </section>
-            </div>
-            <div className="col-6 col-12-narrower">
-              <section>
-                <div className="image featured">
-                  <img src="https://source.unsplash.com/800x450/?smiling, headshot,2" alt="" />
-                </div>
-                <header>
-                  <h3>Person 2</h3>
-                </header>
-                <p>
-                  Bio
-                </p>
-              </section>
-            </div>
-          </div>
+               <div className="row">
+                 {data.frontDeskAdmins.map((person) => {
+                   return (
+                     <div className="col-6 col-12-narrower">
+                       <section>
+                         <div className="image featured">
+                           <img src={person.image} alt={person.imageAlt} />
+                         </div>
+                         <header>
+                           <h3>{person.name}</h3>
+                         </header>
+                         <p>
+                           {person.bio}
+                         </p>
+                       </section>
+                     </div>
+                   )
+                 })}
+               </div>
 
-          <header className="major">
-            <h2>
-              Therapists
-            </h2>
-          </header>
+               <header className="major">
+                 <h2>
+                   Therapists
+                 </h2>
+               </header>
 
-          <div className="row">
-            <div className="col-6 col-12-narrower">
-              <section>
-                <div className="image featured">
-                  <img src="https://source.unsplash.com/800x450/?therapist" alt="" />
-                </div>
-                <header>
-                  <h3>Person 1</h3>
-                </header>
-                <p>
-                  Bio
-                </p>
-              </section>
-            </div>
-            <div className="col-6 col-12-narrower">
-              <section>
-                <div className="image featured">
-                  <img src="https://source.unsplash.com/800x450/?clinician" alt="" />
-                </div>
-                <header>
-                  <h3>Person 2</h3>
-                </header>
-                <p>
-                  Bio
-                </p>
-              </section>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-6 col-12-narrower">
-              <section>
-                <div className="image featured">
-                  <img src="https://source.unsplash.com/800x450/?woman" alt="" />
-                </div>
-                <header>
-                  <h3>Person 3</h3>
-                </header>
-                <p>
-                  Bio
-                </p>
-              </section>
-            </div>
-            <div className="col-6 col-12-narrower">
-              <section>
-                <div className="image featured">
-                  <img src="https://source.unsplash.com/800x450/?man" alt="" />
-                </div>
-                <header>
-                  <h3>Person 4</h3>
-                </header>
-                <p>
-                  Bio
-                </p>
-              </section>
-            </div>
-          </div>
+               <div className="row">
+                 {data.providers.map((person) => {
+                   return (
+                     <div className="col-6 col-12-narrower">
+                       <section>
+                         <div className="image featured">
+                           <img src={person.image} alt={person.imageAlt} />
+                         </div>
+                         <header>
+                           <h3>{person.name}</h3>
+                         </header>
+                         <p>
+                           {person.bio}
+                         </p>
+                       </section>
+                     </div>
+                   )
+                 })}
+               </div>
 
-        </section> */}
+             </section>
+           )}
+
       </article>
-      {/* <NoSidebar props={data}>
-        Testing
-      </NoSidebar> */}
     </Layout>
   )
 }
