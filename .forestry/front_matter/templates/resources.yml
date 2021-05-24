@@ -19,7 +19,7 @@ fields:
     label: toID
     description: navigates to which section on page
     required: true
-  hidden: true
+  hidden: false
 - type: field_group_list
   name: foodBanks
   label: Food Banks
