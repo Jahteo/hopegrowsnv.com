@@ -29,7 +29,7 @@ export const allImgs1200W = [
   DUnionH1,
   DUnionH2,
   // DUnionH3,
-  FCityHall,
+  // FCityHall,
   // FCourtHouse1,
   // FCourtHouse2,
   // FGrimesP1,
