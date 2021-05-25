@@ -79,7 +79,8 @@
         }
       ]
     },
-    { "name": "Medicaid & Welfare",
+    {
+      "name": "Medicaid & Welfare",
       "id": "medicaidWelfares",
       "listings": [
         {
@@ -114,7 +115,8 @@
         }
       ]
     },
-    { "name": "Crisis Lines",
+    {
+      "name": "Crisis Lines",
       "id": "crisis",
       "listings": [
         {
@@ -155,7 +157,8 @@
         }
       ]
     },
-    { "name": "Legal Aides",
+    {
+      "name": "Legal Aides",
       "id": "legal",
       "listings": [
         {
@@ -178,7 +181,8 @@
         }
       ]
     },
-    { "name": "DCSF Offices",
+    {
+      "name": "DCSF Offices",
       "id": "dcfso",
       "listings": [
         {
@@ -195,7 +199,8 @@
         }
       ]
     },
-    { "name": "School Resources",
+    {
+      "name": "School Resources",
       "id": "school",
       "listings": [
         {
@@ -218,7 +223,8 @@
         }
       ]
     },
-    { "name": "Housing",
+    {
+      "name": "Housing",
       "id": "housing",
       "listings": [
         {
@@ -236,11 +242,13 @@
         {
           "name": "Cares Housing Assistance Program (CHAP)",
           "tel": "775-887-1795",
-          "address": "housing.nv.gov"
+          "address": "",
+          "url": "housing.nv.gov"
         }
       ]
     },
-    { "name": "Utilities",
+    {
+      "name": "Utilities",
       "id": "utilities",
       "listings": [
         {
