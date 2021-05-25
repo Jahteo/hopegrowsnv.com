@@ -3,6 +3,12 @@
   "content": "We are a collection of providers and other team members coming together to do our best to provide our clients with the support and treatment to aid them in achieving their goals. The majority of our team have lived here in Nevada majority of our lives and we want to provide and support our fellow Nevadans in their journeys in health and wellness.",
   "providers": [
     {
+      "name": "Human",
+      "image": "",
+      "imageAlt": "",
+      "bio": ""
+    },
+    {
       "image": "/images/download-1.jpg",
       "imageAlt": "The Rock pretending to be Bonnie. He is in front of a white wall and is smirking at the camera.",
       "bio": "Here's a blurb. A great blurb. Bonnie is awesome.",
