@@ -11,7 +11,6 @@ fields:
   required: true
 - type: field_group_list
   name: frontDeskAdmins
-  label: Front Desk Admins
   fields:
   - type: text
     name: name
@@ -33,6 +32,7 @@ fields:
     name: bio
     label: Bio
     required: true
+  label: Administrative Support
 - type: field_group_list
   name: providers
   label: Providers
