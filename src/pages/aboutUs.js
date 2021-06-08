@@ -21,7 +21,7 @@ export default function aboutUs() {
              <section className="wrapper style3 container special">
                <header className="major">
                  <h2>
-                   Front Desk
+                   Administrative Support
                  </h2>
                </header>
 
