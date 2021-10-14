@@ -1,5 +1,5 @@
 {
-  "display": true,
+  "display": false,
   "content": "We are a collection of providers and other team members coming together to do our best to provide our clients with the support and treatment to aid them in achieving their goals. The majority of our team have lived here in Nevada the majority of our lives and we want to provide and support our fellow Nevadans in their journeys in health and wellness.",
   "providers": [
     {
@@ -16,11 +16,6 @@
     }
   ],
   "frontDeskAdmins": [
-    {
-      "image": "/images/sheena-photo.jpg",
-      "imageAlt": "",
-      "bio": "My name is Sheena and I am the Business Manager here at Hope Grows Counseling. I have worked the past 7 years in administration and the last 3 of those in a Mental Health setting. I will be your first point of contact and will help you connect with one of our qualified mental health professionals. I recently received my certificate from the State as a Certified Professional Biller (CPB). I grew up in Northern Nevada and currently live in Lyon County with my husband and three kids.  I feel honored to be a part of an organization that is making the world a better place one person at a time. ",
-      "name": "Sheena"
-    }
+
   ]
 }
