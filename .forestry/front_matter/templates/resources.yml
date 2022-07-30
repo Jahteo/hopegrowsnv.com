@@ -42,4 +42,4 @@ fields:
       required: false
   hidden: false
 pages:
-- src/data/resources.json
+- src/data/Cost of Care and Insurance.json
