@@ -7,7 +7,7 @@ import data from '../data/resources.json'
 export default function resources() {
   return (
     <Layout>
-      <title>List of community resouces</title>
+      <title>List of community resources</title>
       <article id="main">
         <AltBanner pageName="Resources" />
         <header className="container">
@@ -29,8 +29,10 @@ export default function resources() {
         <section className="wrapper style3 container special">
           <div className="content">
             <section>
-
-              {data.resourceSections.map((section) => {
+              <header><h2>
+                The resource list is currently under review and will be back up and running soon.
+              </h2></header>
+              {/* {data.resourceSections.map((section) => {
                 return (
                   <>
                     <section id={section.id} className="wrapper style2 container special">
@@ -51,7 +53,7 @@ export default function resources() {
                     })}
                   </>
                 )
-              })}
+              })} */}
 
             </section>
           </div>

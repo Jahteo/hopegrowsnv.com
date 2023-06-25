@@ -46,11 +46,11 @@ const navList = [
     label: 'Services',
     className: '',
   },
-  {
-    to: '/resources',
-    label: 'Resources',
-    className: '',
-  },
+  // {
+  //   to: '/resources',
+  //   label: 'Resources',
+  //   className: '',
+  // },
   {
     to: 'https://hopegrowsnv.clientsecure.me/sign-in',
     label: 'Log In',
